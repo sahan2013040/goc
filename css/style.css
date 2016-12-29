@@ -1,0 +1,192 @@
+/*All css stylings of goc*/
+
+@font-face {
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+}
+.button {
+    border-color: white;
+    color: white;
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 6px solid white;
+    color: white;
+}
+.input {
+    border-color: white;
+    color: white;
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color: white;
+    margin: 5px;
+}
+body {
+    background: url("../images/background_wood_panel.jpeg");
+    background-size: cover;
+    margin: 0;
+    /*overflow-x: hidden;
+    overflow-y: hidden;*/
+}
+.reservationTitle {
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+/**MENU**/
+
+.menu {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    /*left: 12%;*/
+    
+    margin-left: 5%;
+    /* z-index: 50;*/
+    /*overflow-y: auto;*/
+    
+    padding-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    color: white;
+    /*margin-top: 2%;*/
+}
+.menu.closed {
+    left: -250px;
+}
+.text {
+    width: 60%;
+    margin: auto;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    margin-top: 5%;
+        
+}
+h1,
+h2 {
+    color: #444;
+}
+p {
+    color: #444;
+}
+p img {
+    float: left;
+    margin: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    /* padding-left: 20px;
+  padding-right: 20px;*/
+}
+.menu ul li {
+    color: floralwhite;
+    font-size: 14px;
+    margin: 0 0 0 0;
+    display: block;   
+    line-height: 40px;  
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.menu ul li:hover {
+    background-color: #ff9933;
+    cursor: pointer;
+}
+
+.username {
+    text-align: center;
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding-left: 25%;
+    margin: inherit;
+}
+.menubutton {
+    border-color: white;
+    color: white;
+    font-size: 12px;
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 4px solid white;
+    color: white;
+    text-align: left;
+}
+#ctBtnL {
+    vertical-align: middle;
+    margin: 1%;
+    display: inline-block;
+    background-image: url('../images/ct.png');
+}
+#stBtnL {
+    vertical-align: middle;
+    margin: 1%;
+    display: inline-block;
+    background-image: url('../images/st.png');
+}
+#profileBtnL {
+    vertical-align: middle;
+    margin: 1%;
+    display: inline-block;
+    background-image: url('../images/person.png');
+}
+#helpBtnL {
+    vertical-align: middle;
+    margin: 1%;
+    width: 17%;
+    display: inline-block;
+    background-image: url('../images/help.png');
+}
+button em.leftImage {
+    background-size: 100% 100%;
+    width: 15%;
+    height: 40px;
+    background-position: 140.112201963534% 973.333333333333%;
+}
+/*button em.rightImage {
+    background-size: 100% 100%;
+    width: 15%;
+    height: 40px;
+    background-position: -64px -16px;
+}*/
+#userImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ctimg {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.4);
+    -moz-box-shadow: inset 0 0 1px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.4);
+    box-shadow: inset 0 0 1px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.4);
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.modal-body {
+    background-image: url('../images/paperScroll.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    width: auto;
+}
