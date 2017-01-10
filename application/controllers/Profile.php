@@ -28,6 +28,11 @@ class Profile extends CI_Controller {
 	{
 		$this->load->view('newsletter_view');
 	}
+    
+    public function favPoi()
+	{
+		$this->load->view('favourite_poi_view');
+	}
 
 	
 }

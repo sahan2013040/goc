@@ -183,13 +183,13 @@ button em.leftImage {
     border-radius: 20px;
 }
 
-.modal-body {
+/*.modal-body {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 500px;
+    height: auto;
     width: auto;
-}
+}*/
 
 
 .carousel-inner > .item > img,
@@ -241,7 +241,7 @@ input[type="checkbox"] {
     height: 20px;
     width: 20px;
 }
-.modal {
+/*.modal {
   text-align: center;
 }
 
@@ -258,7 +258,7 @@ input[type="checkbox"] {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-}
+}*/
 #imgtext {
     position: absolute;
     top: 5%;
@@ -271,4 +271,31 @@ input[type="checkbox"] {
     font-size: 20px;
     font-family: Arial;
     color: black;
+}
+
+.modal-content {
+	background:url('../images/brown_paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttonEmailFav {       
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 6px solid black;
+    color: black;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
