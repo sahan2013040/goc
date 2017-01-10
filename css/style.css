@@ -187,7 +187,7 @@ button em.leftImage {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 500px;
+    height: 300px;
     width: auto;
 }
 
@@ -203,4 +203,18 @@ button em.leftImage {
   font-family: Arial;
   font-weight: bold;
   color: white;
+}
+
+#iphoneMap{
+    height: 539px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#ipadMap{
+    height: 593px;
+    width: 65%;
+    margin: 0;
+    padding: 0;
 }
