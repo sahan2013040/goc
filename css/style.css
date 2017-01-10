@@ -259,3 +259,16 @@ input[type="checkbox"] {
   text-align: left;
   vertical-align: middle;
 }
+#imgtext {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    height: 180px;
+    padding: 4px;
+    background-color: rgba(142, 135, 135, 0.5);    
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+}
