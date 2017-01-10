@@ -30,12 +30,12 @@
       <ul>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="ctBtnL" class="leftImage"> </em> Create Treasure Hunt
+               <em id="ctBtnL" class="leftImage"> </em> Create  Treasure  Hunt
                <!-- <em id="ctBtnR" class='rightImage'></em> --> </button>
          </li>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> --></em>
+               <em id="stBtnL" class="leftImage"> </em> Start  Treasure  Hunt <!-- <em class='rightImage'> --></em>
             </button>
          </li>
          <li>
@@ -66,7 +66,7 @@
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-md-9">
-                  <h2 class="reservationTitle"> PUB NAME </h2> </div>
+                  <h2 class="title"> PUB NAME </h2> </div>
                 <div class="col-md-3"><img src="../images/favourite.png" width="50%" height="50%"
                   class="img-responsive" ></div>
               </div>
@@ -118,7 +118,7 @@
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-xs-9">
-                  <h2 class="reservationTitle"> PUB NAME </h2> </div>
+                  <h2 class="title"> PUB NAME </h2> </div>
                 <div class="col-xs-3"><img src="../images/favourite.png" width="100%" height="100%"
                   class="img-responsive"></div>
               </div>

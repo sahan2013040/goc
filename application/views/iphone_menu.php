@@ -38,7 +38,7 @@
       <div id="content" class="text" style="padding-left:0; padding-top:5%;">
          <div>
             <label class="col-md-12">
-               <h2 class="reservationTitle"> Reservation </h2>
+               <h2 class="title"> Reservation </h2>
             </label>
          </div>
          <br>

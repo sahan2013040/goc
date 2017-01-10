@@ -33,7 +33,7 @@ body {
     /*overflow-x: hidden;
     overflow-y: hidden;*/
 }
-.reservationTitle {
+.title {
     font-family: goc;
     src: url(../fonts/Game_of_Thrones.ttf);
     font-weight: bold;
@@ -121,12 +121,12 @@ p img {
 .menubutton {
     border-color: white;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     font-family: goc;
     src: url(../fonts/Game_of_Thrones.ttf);
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
-    border: 4px solid white;
+    border: 3px solid white;
     color: white;
     text-align: left;
 }
@@ -191,6 +191,7 @@ button em.leftImage {
     width: auto;
 }
 
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     width: 85%;   
@@ -204,6 +205,7 @@ button em.leftImage {
   font-weight: bold;
   color: white;
 }
+<<<<<<< HEAD
 
 #iphoneMap{
     height: 539px;
@@ -217,4 +219,72 @@ button em.leftImage {
     width: 65%;
     margin: 0;
     padding: 0;
+=======
+.form-check-label { 
+    color: white;
+    font-family: Arial;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.search { 
+	padding:6px 15px 6px 30px;	
+    margin: 3px;
+}
+
+.rounded { 
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	-webkit-border-radius:15px; 
+}
+
+.light{
+	width:95%;
+	padding:1% 2% 1% 2%;
+    background: url('../images/light-grey.jpg');
+    margin-bottom: 5%;
+}
+
+.light input[type=text]{
+	border:1px solid #acb1b7;
+	background-color:#fcfcfc;
+    width: 100%;
+
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+#imgtext {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    height: 180px;
+    padding: 4px;
+    background-color: rgba(142, 135, 135, 0.5);    
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+>>>>>>> 7a5ffbf05ca52a2ec25c3d4243a4999ee1b50448
 }
