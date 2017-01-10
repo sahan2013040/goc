@@ -30,12 +30,12 @@
       <ul>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="ctBtnL" class="leftImage"> </em> Create Treasure Hunt
+               <em id="ctBtnL" class="leftImage"> </em> Create  Treasure  Hunt
                <!-- <em id="ctBtnR" class='rightImage'></em> --> </button>
          </li>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> --></em>
+               <em id="stBtnL" class="leftImage"> </em> Start  Treasure  Hunt <!-- <em class='rightImage'> --></em>
             </button>
          </li>
          <li>
