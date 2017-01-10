@@ -22,8 +22,25 @@
         });
       </script>  
       <style type="text/css">
-       
-       
+        .modal-content {
+            background:url('../../images/brown_paper.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .modal:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -4px;
+        }
+
+        .modal-dialog {
+          display: inline-block;
+          text-align: left;
+          vertical-align: middle;
+        }
       </style>   
    </head>
    <body>
@@ -64,7 +81,7 @@
          <!-- Pubs list-->
          <div class="row">
             <div class="col-xs-3">
-            <img src="../../images/lovebar.png" width="100%" height="50%" class="img-responsive">
+            <img src="../../images/lovebarFav.png" width="100%" height="50%" class="img-responsive">
             </div>
             <div class="col-xs-7">
             <h4 class="title"> LOVEBAR</h4> 
@@ -78,7 +95,7 @@
           
         <div class="row">
             <div class="col-xs-3">
-            <img src="../../images/repub.png" width="100%" height="50%" class="img-responsive">
+            <img src="../../images/repubFav.png" width="100%" height="50%" class="img-responsive">
             </div>
             <div class="col-xs-7">
             <h4 class="title"> THE REPUBLIK</h4> 
@@ -92,7 +109,7 @@
           
         <div class="row">
             <div class="col-xs-3">
-            <img src="../../images/flamingo.png" width="100%" height="50%" class="img-responsive">
+            <img src="../../images/flamingoFav.png" width="100%" height="50%" class="img-responsive">
             </div>
             <div class="col-xs-7">
             <h4 class="title"> FLAMINGO</h4> 
