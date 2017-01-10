@@ -196,12 +196,11 @@ button em.leftImage {
     width: 85%;   
     margin: auto;
 }
-
-/*#pubInfo{
+#pubInfo{
   padding-bottom:5%;
   text-align: justify;
   text-justify: inter-word;
   font-family: Arial;
   font-weight: bold;
   color: white;
-}*/
+}
