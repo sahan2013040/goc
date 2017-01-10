@@ -205,22 +205,22 @@ button em.leftImage {
   font-weight: bold;
   color: white;
 }
-.form-check-label { 
+.form-check-label {
     color: white;
     font-family: Arial;
     font-size: 24px;
     margin-bottom: 0px;
 }
 
-.search { 
-	padding:6px 15px 6px 30px;	
+.search {
+	padding:6px 15px 6px 30px;
     margin: 3px;
 }
 
-.rounded { 
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+.rounded {
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 }
 
 .light{
@@ -267,8 +267,23 @@ input[type="checkbox"] {
     bottom: 10%;
     height: 180px;
     padding: 4px;
-    background-color: rgba(142, 135, 135, 0.5);    
+    background-color: rgba(142, 135, 135, 0.5);
     font-size: 20px;
     font-family: Arial;
     color: black;
+}
+
+.arialText {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.gotBody {
+    color: black;
+    font-size: xx-large;
+}
+
+@font-face {
+    url(../fonts/Game_of_Thrones.ttf);
 }
