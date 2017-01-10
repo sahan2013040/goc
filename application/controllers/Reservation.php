@@ -8,7 +8,7 @@ class Reservation extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
     }
-
+    
     /**
 	 * Index Page for this controller.
 	 *
@@ -26,7 +26,8 @@ class Reservation extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('reservation_view');
+//		$this->load->view('reservation_view');
+                $this->load->view('map_view');
 	}
 
 	public function menu()

@@ -187,7 +187,11 @@ button em.leftImage {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
+<<<<<<< HEAD
     height: auto;
+=======
+    height: 300px;
+>>>>>>> ac472075aa84476191873de36209927185959948
     width: auto;
 }*/
 
@@ -204,6 +208,19 @@ button em.leftImage {
   font-family: Arial;
   font-weight: bold;
   color: white;
+}
+#iphoneMap{
+    height: 539px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#ipadMap{
+    height: 593px;
+    width: 65%;
+    margin: 0;
+    padding: 0;
 }
 .form-check-label { 
     color: white;
@@ -234,31 +251,13 @@ button em.leftImage {
 	border:1px solid #acb1b7;
 	background-color:#fcfcfc;
     width: 100%;
-
 }
 
 input[type="checkbox"] {
     height: 20px;
     width: 20px;
 }
-/*.modal {
-  text-align: center;
-}
 
-@media screen and (min-width: 768px) { 
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}*/
 #imgtext {
     position: absolute;
     top: 5%;
@@ -273,11 +272,6 @@ input[type="checkbox"] {
     color: black;
 }
 
-.modal-content {
-	background:url('../images/brown_paper.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .buttonEmailFav {       
     font-family: goc;
     src: url(../fonts/Game_of_Thrones.ttf);
@@ -285,17 +279,4 @@ input[type="checkbox"] {
     background-color: rgba(0, 0, 0, 0);
     border: 6px solid black;
     color: black;
-}
-.modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
 }

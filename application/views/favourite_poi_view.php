@@ -20,7 +20,11 @@
              console.log("another device");
          }
         });
-      </script>   
+      </script>  
+      <style type="text/css">
+       
+       
+      </style>   
    </head>
    <body>
    <img src="../../images/logo_iPhone.png" width="100%" height="80%">
