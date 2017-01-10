@@ -314,3 +314,6 @@ input[type="checkbox"] {
 @font-face {
     url(../fonts/Game_of_Thrones.ttf);
 }
+.second {
+  display: none;
+}
