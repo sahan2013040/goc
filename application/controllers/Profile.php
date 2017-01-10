@@ -33,6 +33,11 @@ class Profile extends CI_Controller {
 	{
 		$this->load->view('favourite_poi_view');
 	}
+    
+     public function profile()
+	{
+		$this->load->view('profile_view');
+	}
 
 	
 }
