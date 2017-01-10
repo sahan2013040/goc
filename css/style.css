@@ -222,22 +222,22 @@ button em.leftImage {
     margin: 0;
     padding: 0;
 }
-.form-check-label { 
+.form-check-label {
     color: white;
     font-family: Arial;
     font-size: 24px;
     margin-bottom: 0px;
 }
 
-.search { 
-	padding:6px 15px 6px 30px;	
+.search {
+	padding:6px 15px 6px 30px;
     margin: 3px;
 }
 
-.rounded { 
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+.rounded {
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 }
 
 .light{
@@ -272,11 +272,39 @@ input[type="checkbox"] {
     color: black;
 }
 
-.buttonEmailFav {       
+/*select character wheel css*/
+#piemenu { width: 95%; height: auto; margin-left: auto; }
+
+[class|=wheelnav-piemenu-slice-basic] { fill: #000000; stroke: white; stroke-width: 2; }
+[class|=wheelnav-piemenu-slice-selected] { fill: #000000; stroke: green; stroke-width: 4;}
+[class|=wheelnav-piemenu-slice-hover] { fill: #222;  stroke: white; cursor: pointer; }
+
+[class|=wheelnav-piemenu-title-basic] { fill: #333; stroke: none; }
+[class|=wheelnav-piemenu-title-selected] { fill: #fff; stroke: none; }
+[class|=wheelnav-piemenu-title-hover] { fill: #222; stroke: none; cursor: pointer; }
+
+.wheelnav-piemenu-marker { fill: #000000; stroke: green; stroke-width: 2; }
+
+.buttonEmailFav {
     font-family: goc;
     src: url(../fonts/Game_of_Thrones.ttf);
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     border: 6px solid black;
     color: black;
+}
+
+.arialText {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.gotBody {
+    color: black;
+    font-size: xx-large;
+}
+
+@font-face {
+    url(../fonts/Game_of_Thrones.ttf);
 }

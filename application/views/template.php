@@ -11,7 +11,7 @@
 <body>
 <img src="../images/logo_iPhone.png" width="100%" height="80%">
 
-<div id="ipadM" class="menu opened container-fluid visible-md hiden-xs visible-lg" style="margin-top: 30px">
+<div id="ipadM" class="menu opened container-fluid visible-md hidden-xs" style="margin-top: 30px">
     <br>
     <img src="../images/user.png" id="userImg" width="50%" height="30%">
     <label class="username"> John Snow </label>
