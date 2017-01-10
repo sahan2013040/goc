@@ -14,4 +14,9 @@ class HuntController extends CI_Controller
     {
         $this->load->view('happenings');
     }
+
+    public function startEvent()
+    {
+        $this->load->view('startTreasureHunt');
+    }
 }
