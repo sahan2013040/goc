@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="application/javascript">
@@ -17,28 +18,7 @@
             console.log("another device");
             $('#i').text('ipad');
         }
-    </script>
-    <style type="text/css">
-        @font-face {
-            font-family: goc;
-            src: url(../../fonts/Game_of_Thrones.ttf);
-            font-weight: bold;
-        }
-        button {
-            font-family: "goc";
-            margin-left: 10px;
-        }
-        input {
-            border-color: white;
-            background-color: white;
-            color: white
-        }
-        body {
-            background: url("../../images/background_wood_panel.jpeg");
-            background-size: cover;
-            margin: 0;
-        }
-    </style>
+    </script>    
 </head>
 <body>
 

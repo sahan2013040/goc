@@ -5,27 +5,32 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="../css/style.css">
-      <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="../js/jquery-3.1.1.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
       <script src="../js/bootstrap.js"></script>
-      <!--script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
       <script type="application/javascript">
+      $( document ).ready(function() {
          var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
          var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
          if (isiPad){
              console.log("ipad ");
              $('#i').text('ipad');
+             $('#iphoneM').hide();
          } else if (isiPhone){
              console.log("iphone ");
              $('#i').text('ipad');
+              $('#ipadM').hide();
          } else {
              console.log("another device");
              $('#i').text('ipad');
+             $('#iphoneM').hide();
          }
+        });
       </script>   
    </head>
    <body>
 
-      <div class="menu opened">
+      <div id="ipadM" class="menu opened">
          <br>
          <img src="../images/logo_iPhone.png" width="100%" height="10%"> <br> <br>
          <img src="../images/user.png" id="userImg" width="50%" height="30%">
@@ -46,6 +51,16 @@
             </li>
          </ul>
       </div>
+
+    <div id="iphoneM" style="padding-left:2px; padding-right: 2px;">
+      <table width="90%" height="20%" cellspacing="0" cellpadding="0" border="0" id="Table_01">
+      <tbody><tr><td><a href="URL"><img width="60%" height="14.5%" alt="" src="../images/ct.png" /></a></td>
+      <td><a href="URL"><img width="60%" height="15%" alt="" src="../images/st.png" /></a></td>
+      <td><a href="URL"><img width="60%" height="15%" alt="" src="../images/person.png" /></a></td>
+      <td><a href="URL"><img width="250%" height="65%" alt="" src="../images/help.png" /></a></td>
+      </tr>
+      </tbody></table>
+   </div>
 
       <div id="content" class="text" style="padding-left:15%; padding-top:5%;">
          <div>
