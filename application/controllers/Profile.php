@@ -26,7 +26,7 @@ class Profile extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('newsletter_view');
+		$this->load->view('select_character_view');
 	}
 
 	
