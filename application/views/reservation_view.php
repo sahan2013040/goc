@@ -25,6 +25,7 @@
    <body>
    <img src="../images/logo_iPhone.png" width="100%" height="80%">
 
+
    <div id="ipadM" class="menu opened container-fluid visible-md hiden-xs" style="margin-top: 30px">
       <br>
       <img src="../images/user.png" id="userImg" width="50%" height="30%">
@@ -62,8 +63,8 @@
           </tr>
        </table>
    </div>
-
-      <div id="content" class="container-fluid col-md-8 col-md-push-4">
+      <br> <br>
+      <div id="content" class="container-fluid col-md-8 col-md-push-4">      
          <div>
                <h2 class="reservationTitle col-centered"> Reservation </h2>
          </div>

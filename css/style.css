@@ -190,3 +190,18 @@ button em.leftImage {
     height: 500px;
     width: auto;
 }
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 85%;   
+    margin: auto;
+}
+
+/*#pubInfo{
+  padding-bottom:5%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+}*/
