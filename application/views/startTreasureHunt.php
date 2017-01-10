@@ -21,7 +21,7 @@
     </div>
 
 <!--    show carousal for ipad-->
-    <div class="visible-md hiden-xs" style="margin-top: 15px;">
+    <div class="visible-md hidden-xs" style="margin-top: 15px;">
         <?php $this->view('carousal') ?>
     </div>
 
@@ -53,47 +53,62 @@
         <p class="title">Invitees</p>
     </div>
 
-    <div class="container-fluid pre-scrollable row">
+    <div class="container-fluid pre-scrollable row" style="height: 150%">
         <?php
 //            foreach (   as $row)
 //            {
-                echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
+                echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
                     "<img src='../../images/tick.png' width='50%' height='50%'>".
                     "<p class='arialText'>Sahan Perera</p>".
                     "</div>"
                 ;
-        echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
             "<img src='../../images/tick.png' width='50%' height='50%'>".
             "<p class='arialText'>Sahan Perera</p>".
             "</div>"
         ;
-        echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
-            "<img src='../../images/tick.png' width='50%' height='50%'>".
-            "<p class='arialText'>John Junior Jake Justin Never Eber</p>".
-            "</div>"
-        ;
-        echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
             "<img src='../../images/tick.png' width='50%' height='50%'>".
             "<p class='arialText'>Sahan Perera</p>".
             "</div>"
         ;
-        echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
             "<img src='../../images/tick.png' width='50%' height='50%'>".
             "<p class='arialText'>Sahan Perera</p>".
             "</div>"
         ;
-        echo "<div class='col-xs-4 col-md-4' style='height: 40px;'>".
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
             "<img src='../../images/tick.png' width='50%' height='50%'>".
             "<p class='arialText'>Sahan Perera</p>".
             "</div>"
         ;
-//            }
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
+            "<img src='../../images/tick.png' width='50%' height='50%'>".
+            "<p class='arialText'>Sahan Perera</p>".
+            "</div>"
+        ;
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>".
+            "<img src='../../images/tick.png' width='50%' height='50%'>".
+            "<p class='arialText'>Sahan Perera</p>".
+            "</div>"
+        ;
+
+
+
+        //            }
 
         ?>
     </div>
 
 <!--    Start Event-->
-    <button class="container-fluid title" style="position:fixed; bottom: 10px; width: 100%;">Start Event</button>
+<!--    <button class="col-md-12 btn button " style="position:fixed; bottom: 10px; width: 100%; font-family: goc">-->
+<!--        Start  Event-->
+<!--    </button>-->
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-secondary btn-lg btn-block button"
+                > Start Event
+        </button>
+    </div>
 
 </div>
 </body>
