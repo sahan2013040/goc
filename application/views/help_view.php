@@ -25,7 +25,6 @@
    <body>
    <img src="../images/logo_iPhone.png" width="100%" height="80%">
 
-
    <div id="ipadM" class="menu opened container-fluid visible-md hiden-xs" style="margin-top: 30px">
       <br>
       <img src="../images/user.png" id="userImg" width="50%" height="30%">
@@ -38,9 +37,7 @@
          </li>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-
-               <em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> -->
-
+               <em id="stBtnL" class="leftImage"> </em> Start  Treasure  Hunt <!-- <em class='rightImage'> --></em>
             </button>
          </li>
          <li>
@@ -49,7 +46,8 @@
          </li>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> --></button>
+               <em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> --></em> </button>
+         </li>
          </li>
       </ul>
    </div>
@@ -67,58 +65,26 @@
       <br> <br>
       <div id="content" class="container-fluid col-md-8 col-md-push-4">      
          <div>
-               <h2 class="title col-centered"> Reservation </h2>
+               <h2 class="title col-centered"> HOW TO PLAY </h2>
+               <div class="col-xs-10"><img src="../images/line_small.png" width="80%" height="50%"
+                  class="img-responsive" style=" display: block; margin: 0 auto;" ></div>         
          </div>
          <br>
-         <div class="form-group row">
-            <div class="col-md-12">
-               <input class="form-control input" type="text" name="name" id="name" placeholder="NAME"
-                  required>
+         <div class="form-group row ">
+            <div class="col-md-12 container-fluid">
+              <div id="pubInfo" style="color: white; font-size:20px;word-wrap: break-word; overflow-y:scroll;">
+                1. Create a treasure hunt event by selecting a pub on the map. <br> <br>
+                2. Invite friends to participate in the event and reserve the selected pub  by filling in the form on reservation page. <br> 
+                  <br>
+                NOTE: Friends can be added by searching their username or email on invite friends page. The invitation will be sent to the 
+                user's email account along with a clue which they should solve in order to determine the location of the pub. <br> <br>
+                3. A created event can be started by navigating to the Start Treasure Hunt page using the menu on the left. <br> <br>
+                4. Also you can join an event by navigating to Start Treasure Hunt Page and selecting the event you would like to join. <br> 
+                  <br>
+                NOTE: You can  start an event only after you reach the location of the pub. <br> <br>
+                TIP: Additional points will be awarded upon reaching the pub on or before start time of event.
+            </div> 
             </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-md-12">
-               <input class="form-control input"  type="number" name="telNo" id="telNo" placeholder="TELEPHONE NUMBER"
-                  required>
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-md-12">
-               <input class="form-control input"  type="number" min="1" max="100" name="guests" id="guests" placeholder="NO. OF GUESTS"
-                  required>
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-md-12">
-               <input  class="form-control input"  type="text" name="date" id="date" placeholder="DATE" onfocus="(this.type='date')"
-                  required>  
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-md-12">
-               <input  class="form-control input"  type="text" name="time" id="time" placeholder="TIME" onfocus="(this.type='time')"
-                  required>
-            </div>
-         </div>
-         <br> <br>
-         <div class="col-md-12">
-            <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" data-target="#myModal">
-            Confirm </button>
-            <br>            
-            <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">                
-                <div class="modal-content" style="background-color:transparent;">                 
-                  <div class="modal-body">
-                    <h3 class="title col-centered" style="color: black;">BOOKING  CONFIRMATION</h3>
-                    <br>
-                      <div id="pubInfo" style="color: black; font-size:14;">
-                         In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever                            since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world                             
-                         </div> 
-                      <button type="submit"> OK </button>
-                  </div>                
-                </div>
-              </div>
-            </div>
-         </div>
+         </div>    
       </div>
    </body>
