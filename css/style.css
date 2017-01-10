@@ -191,6 +191,7 @@ button em.leftImage {
     width: auto;
 }
 
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     width: 85%;   
@@ -203,4 +204,42 @@ button em.leftImage {
   font-family: Arial;
   font-weight: bold;
   color: white;
+}
+
+.form-check-label { 
+    color: white;
+    font-family: Arial;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.search { 
+	padding:6px 15px 6px 30px;	
+    margin: 3px;
+}
+
+.rounded { 
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	-webkit-border-radius:15px; 
+}
+
+.light{
+	width:95%;
+	padding:1% 2% 1% 2%;
+    background: url('../images/light-grey.jpg');
+    margin-bottom: 5%;
+}
+
+.light input[type=text]{
+	border:1px solid #acb1b7;
+	background-color:#fcfcfc;
+    width: 100%;
+
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    
 }
