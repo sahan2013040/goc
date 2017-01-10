@@ -66,7 +66,7 @@
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-md-9">
-                  <h2 class="reservationTitle"> PUB NAME </h2> </div>
+                  <h2 class="title"> PUB NAME </h2> </div>
                 <div class="col-md-3"><img src="../images/favourite.png" width="50%" height="50%"
                   class="img-responsive" ></div>
               </div>
@@ -118,7 +118,7 @@
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-xs-9">
-                  <h2 class="reservationTitle"> PUB NAME </h2> </div>
+                  <h2 class="title"> PUB NAME </h2> </div>
                 <div class="col-xs-3"><img src="../images/favourite.png" width="100%" height="100%"
                   class="img-responsive"></div>
               </div>

@@ -66,7 +66,7 @@
       <br> <br>
       <div id="content" class="container-fluid col-md-8 col-md-push-4">      
          <div>
-               <h2 class="reservationTitle col-centered"> Reservation </h2>
+               <h2 class="title col-centered"> Reservation </h2>
          </div>
          <br>
          <div class="form-group row">
@@ -101,24 +101,21 @@
          </div>
          <br> <br>
          <div class="col-md-12">
-            <button type="submit" class="btn btn-secondary btn-lg btn-block button">
+            <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" data-target="#myModal">
             Confirm </button>
-            <br>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
+            <br>            
             <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-
-                
+              <div class="modal-dialog">                
                 <div class="modal-content" style="background-color:transparent;">                 
                   <div class="modal-body">
-                    <h1 style="text-align:center;">Some text in the modal.</h1>
+                    <h3 class="title col-centered" style="color: black;">BOOKING  CONFIRMATION</h3>
                     <br>
-                    <button type="button" class="btn btn-info btn-lg">Open Modal</button>
-                  </div>
-                
+                      <div id="pubInfo" style="color: black; font-size:14;">
+                         In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever                            since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world                             
+                         </div> 
+                      <button type="submit"> OK </button>
+                  </div>                
                 </div>
-
               </div>
             </div>
          </div>
