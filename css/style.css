@@ -183,13 +183,17 @@ button em.leftImage {
     border-radius: 20px;
 }
 
-.modal-body {
+/*.modal-body {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 500px;
+<<<<<<< HEAD
+    height: auto;
+=======
+    height: 300px;
+>>>>>>> ac472075aa84476191873de36209927185959948
     width: auto;
-}
+}*/
 
 
 .carousel-inner > .item > img,
@@ -205,22 +209,35 @@ button em.leftImage {
   font-weight: bold;
   color: white;
 }
-.form-check-label { 
+#iphoneMap{
+    height: 539px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#ipadMap{
+    height: 593px;
+    width: 65%;
+    margin: 0;
+    padding: 0;
+}
+.form-check-label {
     color: white;
     font-family: Arial;
     font-size: 24px;
     margin-bottom: 0px;
 }
 
-.search { 
-	padding:6px 15px 6px 30px;	
+.search {
+	padding:6px 15px 6px 30px;
     margin: 3px;
 }
 
-.rounded { 
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+.rounded {
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 }
 
 .light{
@@ -234,31 +251,13 @@ button em.leftImage {
 	border:1px solid #acb1b7;
 	background-color:#fcfcfc;
     width: 100%;
-
 }
 
 input[type="checkbox"] {
     height: 20px;
     width: 20px;
 }
-.modal {
-  text-align: center;
-}
 
-@media screen and (min-width: 768px) { 
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
 #imgtext {
     position: absolute;
     top: 5%;
@@ -274,16 +273,38 @@ input[type="checkbox"] {
 }
 
 /*select character wheel css*/
-/*#piemenu > svg { width: 100%; height: 100%; }*/
 #piemenu { width: 95%; height: auto; margin-left: auto; }
-/*@media (max-width: 400px) { #piemenu { height: 300px; width: 95%; } }*/
 
 [class|=wheelnav-piemenu-slice-basic] { fill: #000000; stroke: white; stroke-width: 2; }
 [class|=wheelnav-piemenu-slice-selected] { fill: #000000; stroke: green; stroke-width: 4;}
-[class|=wheelnav-piemenu-slice-hover] { fill: #222;  stroke: white; fill-opacity: 0.77; cursor: pointer; }
+[class|=wheelnav-piemenu-slice-hover] { fill: #222;  stroke: white; cursor: pointer; }
 
 [class|=wheelnav-piemenu-title-basic] { fill: #333; stroke: none; }
 [class|=wheelnav-piemenu-title-selected] { fill: #fff; stroke: none; }
 [class|=wheelnav-piemenu-title-hover] { fill: #222; stroke: none; cursor: pointer; }
 
-.wheelnav-piemenu-marker { fill: #444; stroke: #444; stroke-width: 2; }
+.wheelnav-piemenu-marker { fill: #000000; stroke: green; stroke-width: 2; }
+
+.buttonEmailFav {
+    font-family: goc;
+    src: url(../fonts/Game_of_Thrones.ttf);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border: 6px solid black;
+    color: black;
+}
+
+.arialText {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.gotBody {
+    color: black;
+    font-size: xx-large;
+}
+
+@font-face {
+    url(../fonts/Game_of_Thrones.ttf);
+}

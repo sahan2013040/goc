@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <script src="../../js/jquery-3.1.1.min.js"></script>
-    <script src="../../js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../../js/bootstrap.js"></script>
 </head>
 <body>
 <?php $this->view('template'); ?>
 
+<div class="container-fluid col-md-8" style="margin-top: 30px">
+
+    <div class="container-fluid justify-content-md-center">
+            <table cellspacing="0" cellpadding="0" border="0" id="">
+                <tr>
+                    <td class="text-center"><img width="65%" height="50%" alt="" src="../../images/cup.png"/></td>
+                    <td class="text-center"><p class="title">Events</p></td>
+                    <td class="text-center"><img width="65%" height="50%" alt="" src="../../images/cup.png"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-center">
+                        <img width="100%" height="100%" alt="" src="../../images/line_small.png"/>
+                    </td>
+                </tr>
+            </table>
+    </div>
 
 
+    <div class="visible-xs hidden-md pre-scrollable" style="overflow: auto">
+        <?php
+        //        foreach ( as $row){
+        //
+        //        }
+        echo "<hr>" .
+            "<div class='row justify-content-md-center'>" .
+            "<div class='title col-xs-7 col-md-7'  style='font-size: 200%'>" .
+            "Meet Up" .
+            "</div>" .
+            "<div class='col-xs-5 col-md-5'>" .
+            "<img class='' src='../../images/rightarrow.png' width='20%' height='20%'>" .
+            "</div>" .
+            "</div><hr><br>";
+        ?>
+    </div>
+
+
+    <div class="row" style="position:fixed; bottom: 10px; width: 100%;">
+        <div class="col-xs-4 col-md-2"> <img class="" src="../../images/gold%20coin.png" width="60%" height="60%"> </div>
+        <div class="col-xs-7 col-md-8"> <p class="col-md-auto text-left arialText">
+        Tip: Earn points by starting game on time </p> </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-12 visible-md hidden-xs" style="margin-top: 10px">
+        <?php
+        //        foreach ( as $row){
+        //
+        //        }
+        echo
+            "<div class='col-xs-4 col-md-4 text-center' 
+                    style='background: url(../../images/brown_paper.jpg); height: 150px;' >" .
+                "<p class='' style='font-family: goc;  margin-top: 45px'>" .
+                    "Pub Crawl" .
+                "</p>" .
+                "<p>" .
+                    "<b>Invited by: Sahan Perera</b>" .
+                "</p>" .
+            "</div>";
+        ?>
+    </div>
+
+</div>
 </body>
 </html>
