@@ -183,17 +183,13 @@ button em.leftImage {
     border-radius: 20px;
 }
 
-/*.modal-body {
+.modal-body {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-<<<<<<< HEAD
-    height: auto;
-=======
-    height: 300px;
->>>>>>> ac472075aa84476191873de36209927185959948
+    height: 1000px;
     width: auto;
-}*/
+}
 
 
 .carousel-inner > .item > img,
