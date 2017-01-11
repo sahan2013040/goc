@@ -38,12 +38,12 @@
 </div>
 
 <div id="iphoneM" class="container-fluid visible-xs hidden-md">
-    <table width="90%" cellspacing="0" cellpadding="0" border="0" id="Table_01">
+    <table cellspacing="8" cellpadding="0" border="0" id="Table_01">
         <tr>
-            <td> <input id="createTH_Btn" type="image" src="../../images/ct.png" width="60%" height="14.5%"> </td>
-            <td> <input id="startTH_Btn" type="image" src="../../images/st.png" width="60%" height="14.5%"> </td>
-            <td> <input id="profile_Btn" type="image" src="../../images/person.png" width="60%" height="14.5%"> </td>
-            <td> <input id="help_Btn" type="image" src="../../images/help.png" width="250%" height="65%"> </td>
+            <td> <input id="createTH_Btn" type="image" src="../../images/menu_buttons/flatcreate.png" width="90%" height="50%"> </td>
+            <td> <input id="startTH_Btn" type="image" src="../../images/menu_buttons/flatstart.png" width="90%" height="50%"> </td>
+            <td> <input id="profile_Btn" type="image" src="../../images/menu_buttons/flatprofile.png" width="90%" height="50%"> </td>
+            <td> <input id="help_Btn" type="image" src="../../images/menu_buttons/flathelp.png" width="90%" height="50%"> </td>
         </tr>
     </table>
 </div>
