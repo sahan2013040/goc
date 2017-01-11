@@ -39,6 +39,7 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    font-size: 20px;
 }
 .form-actions {
     margin: 0;
@@ -183,17 +184,13 @@ button em.leftImage {
     border-radius: 20px;
 }
 
-/*.modal-body {
+.modal-body {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-<<<<<<< HEAD
-    height: auto;
-=======
     height: 300px;
->>>>>>> ac472075aa84476191873de36209927185959948
     width: auto;
-}*/
+}
 
 
 .carousel-inner > .item > img,
@@ -311,9 +308,9 @@ input[type="checkbox"] {
     font-size: 200%;
 }
 
-@font-face {
+/*@font-face {
     url(../fonts/Game_of_Thrones.ttf);
-}
+}*/
 /*progress indicator css*/
 [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 
@@ -508,11 +505,10 @@ a:active {
     font-weight:normal;
 }
 
-
 #status li.active p {
     color: #b51994;
 }
+
 .second {
   display: none;
-
 }

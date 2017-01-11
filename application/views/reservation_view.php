@@ -38,7 +38,6 @@
          </li>
          <li>
             <button class="btn btn-secondary btn-lg btn-block menubutton">
-
                <em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> -->
 
             </button>
