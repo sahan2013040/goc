@@ -5,7 +5,7 @@
 <body>
 <?php $this->view('template'); ?>
 
-<div class="container-fluid col-md-8" style="margin-top: 30px">
+<div class="container-fluid col-md-8 col-md-push-4" style="margin-top: 30px">
 
     <div class="container-fluid justify-content-md-center">
             <table cellspacing="0" cellpadding="0" border="0" id="">
