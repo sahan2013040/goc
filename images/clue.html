@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost/goc/index.php/clue -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./clue_files/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./clue_files/style.css">
+		<script src="./clue_files/jquery-3.1.1.min.js.download"></script>
+		<script src="./clue_files/jquery.mobile-1.4.5.min.js.download"></script>
+		<script src="./clue_files/bootstrap.js.download"></script>
+		<script type="application/javascript">
+			$( document ).ready(function() {
+			   var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
+			   var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+			   if (isiPad){
+			       console.log("ipad ");
+			   } else if (isiPhone){
+			       console.log("iphone ");
+			   } else {
+			       console.log("another device");
+			   }
+			  });
+		</script>   
+	</head>
+	<body>
+		<img src="./clue_files/logo_iPhone.png" width="100%" height="80%">
+		<div id="ipadM" class="menu opened container-fluid visible-md hiden-xs" style="margin-top: 30px">
+			<br>
+			<img src="./clue_files/user.png" id="userImg" width="50%" height="30%">
+			<label class="username"> John Snow </label>
+			<ul>
+				<li>
+					<button class="btn btn-secondary btn-lg btn-block menubutton">
+						<em id="ctBtnL" class="leftImage"> </em> Create  Treasure  Hunt
+						<!-- <em id="ctBtnR" class='rightImage'></em> --> 
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-secondary btn-lg btn-block menubutton">
+						<em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> -->
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-secondary btn-lg btn-block menubutton">
+						<em id="profileBtnL" class="leftImage"> </em> Profile <!-- <em class='rightImage'></em> --> 
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-secondary btn-lg btn-block menubutton">
+						<em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> -->
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div id="iphoneM" class="container-fluid visible-xs hiden-md">
+			<table width="90%" cellspacing="0" cellpadding="0" border="0" id="Table_01">
+				<tbody><tr>
+					<td><a href="http://localhost/goc/index.php/clue#"><img width="60%" height="14.5%" alt="" src="./clue_files/ct.png"></a></td>
+					<td><a href="http://localhost/goc/index.php/clue#"><img width="60%" height="15%" alt="" src="./clue_files/st.png"></a></td>
+					<td><a href="http://localhost/goc/index.php/clue#"><img width="60%" height="15%" alt="" src="./clue_files/person.png"></a></td>
+					<td><a href="http://localhost/goc/index.php/clue#"><img width="250%" height="65%" alt="" src="./clue_files/help.png"></a></td>
+				</tr>
+			</tbody></table>
+		</div>
+		<br> <br>
+		<div id="content" class="container-fluid col-md-8 col-md-push-4">
+			<div>
+				<h2 class="title col-centered"> Pub Crawl </h2>
+			</div>
+			<br>
+            
+         
+			<div class="" style="background: rgba(0, 0, 0, 0.50);width: 95%;height: 300px;margin-left: 2%;">
+			<!--	<div style="padding: 15% 20%;">
+					<p align="center" style="color:#fff;font-family:Arial;font-size:20px">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
+				</div>-->
+				
+                <div id="drawer">
+  Please fill in the empty fields marked with
+  a <samp style="color:red">red</samp> border.
+</div>
+
+<!-- the form -->
+<form action="http://jquerytools.org/demos/scrollable/wizard.htm#">
+
+  <div id="wizard">
+    <ul id="status">
+      <li class="active" style="margin-left: -5px;"><p>1</p></li>
+      <li style="margin-left: 25px;"><p>2</p></li>
+      <li style="margin-left: 25px;"><p>3</p></li>
+      <li style="margin-left: 25px;"><p>4</p></li>
+    </ul>
+    <div id="space" style="width:810px; background:white; height:10px;">
+    </div>
+    <div class="items">
+      <!-- page1: question1 -->
+      <div class="page">
+	<h2>
+	  <strong>Question 1: </strong> What is the U.S. Capital?
+	  <em>Please select your answer below:</em>
+	</h2>
+	<ul>
+	  <!-- question1 -->
+	  <li class="clearfix">
+	    <button type="button" class="next right">»</button>
+	  </li>
+	</ul>
+      </div>
+      <!-- page1: question2 -->
+      <div class="page">
+
+	<h2>
+	  <strong>Question 2: </strong> Who is the current president?
+	  <em>Please select your answer below:</em>
+	</h2>
+	<ul>
+	  <!-- question1 -->
+	 <li class="clearfix">
+	    <button type="button" class="next right">Proceed »</button>
+	  </li>
+	</ul>
+      </div>
+      <!-- page1: question3 -->
+      <div class="page">
+	<h2>
+	  <strong>Question 3: </strong> How do you say hello in Spanish?
+	  <em>Please select your answer below:</em>
+	</h2>
+	<ul>
+	  <!-- question1 -->
+	<li class="clearfix">
+	    <button type="button" class="next right">Proceed »</button>
+	  </li>
+	</ul>
+      </div>
+      <!-- page1: question4 -->
+      <div class="page">
+	<h2>
+	  <strong>Question 4: </strong> Which answer is correct?
+	  <em>Please select your answer below:</em>
+	</h2>
+	<ul>
+	  <!-- question1 -->
+	  <li class="clearfix">
+	    <button type="button" class="next right">Proceed »</button>
+	  </li>
+	</ul>
+      </div>
+	<img src="http://jquerytools.org/media/img/title/eye.png" style="margin:30px 0 0 140px">
+     </div><!--items-->
+  </div><!--wizard-->
+
+</form>
+
+                                        
+       				
+			</div>
+			<br> <br>
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-secondary btn-lg btn-block button">
+				<img src="./clue_files/scanqr.png" height="50px" width="50px" style="margin: 0px 10px 0px -50px;">SCAN QR CODE </button>
+				<br>  
+				<button type="submit" class="btn btn-secondary btn-lg btn-block button">
+				END EVENT </button>
+				<br>  
+			</div>
+		</div>
+	</body></html>
