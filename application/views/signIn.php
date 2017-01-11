@@ -49,6 +49,10 @@
                 }
                 
             }
+            
+            fucntion onScan(param1, param2){
+                console.log("param1 :"+param1+" param2:"+param2);
+            }
         </script>    
     </head>
     <body>
