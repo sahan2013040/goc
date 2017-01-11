@@ -15,18 +15,18 @@
             if (isiPad){
                 console.log("ipad ");
                 $('#i').text('ipad');
-                $('#iphoneM').hide();
-                $('#iphoneList').hide();
+              /*  $('#iphoneM').hide();
+                $('#iphoneList').hide();*/
             } else if (isiPhone){
                 console.log("iphone ");
                 $('#i').text('ipad');
-                 $('#ipadM').hide();
-                 $('#ipadList').hide();
+               /*  $('#ipadM').hide();
+                 $('#ipadList').hide();*/
             } else {
                 console.log("another device");
                 $('#i').text('ipad');
-                $('#iphoneM').hide();
-                 $('#iphoneList').hide();
+             /*   $('#iphoneM').hide();
+                 $('#iphoneList').hide();*/
             }
            });
       </script>   
