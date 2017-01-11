@@ -9,7 +9,7 @@
     border-color: white;
     color: white;
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     border: 6px solid white;
@@ -19,7 +19,7 @@
     border-color: white;
     color: white;
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid white;
@@ -35,7 +35,7 @@ body {
 }
 .title {
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     color: white;
     text-align: center;
@@ -111,7 +111,7 @@ p img {
 .username {
     text-align: center;
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -123,7 +123,7 @@ p img {
     color: white;
     font-size: 10px;
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     border: 3px solid white;
@@ -222,6 +222,7 @@ button em.leftImage {
     margin: 0;
     padding: 0;
 }
+
 .form-check-label {
     color: white;
     font-family: Arial;
@@ -287,7 +288,7 @@ input[type="checkbox"] {
 
 .buttonEmailFav {
     font-family: goc;
-    src: url(../fonts/Game_of_Thrones.ttf);
+    /*src: url(../fonts/Game_of_Thrones.ttf);*/
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
     border: 6px solid black;
@@ -305,10 +306,14 @@ input[type="checkbox"] {
     font-size: xx-large;
 }
 
+.largeFont {
+    color: white;
+    font-size: 200%;
+}
+
 @font-face {
     url(../fonts/Game_of_Thrones.ttf);
 }
-
 /*progress indicator css*/
 [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 
@@ -506,4 +511,8 @@ a:active {
 
 #status li.active p {
     color: #b51994;
+}
+.second {
+  display: none;
+
 }
