@@ -24,7 +24,8 @@
 			         });
 			
 			     $(function() {
-			         var root = $("#wizard").scrollable();
+                      console.log("clicked");
+			         var root = $(".wizard").scrollable();
 			
 			         // some variables that we need
 			         var api = root.scrollable(),
@@ -32,7 +33,7 @@
 			
 			
 			             // update status bar
-			             $("#status li").removeClass("active").eq(1).addClass("active");
+			             $("#status li").removeClass("active").eq(0).addClass("active");
 			
 			         // if tab is pressed on the next button seek to next page
 			         root.find("button.next").keydown(function(e) {
@@ -92,32 +93,32 @@
 				<h2 class="title col-centered"> Pub Crawl </h2>
 			</div>
 			<br>
-			<div class="" style="background: rgba(0, 0, 0, 0.50);width: 95%;height: 300px;margin-left: 2%;">
-				<div id="wizard" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
+			<div id="ipadClues" class="container-fluid visible-md hiden-xs" style="background: rgba(0, 0, 0, 0.50);width: 95%;height: 300px;margin-left: 2%;">
+				<div id="wizard" class="carousel slide wizard" data-ride="carousel" data-interval="false">
+					 <!--Indicators--> 
 					<ul id="status" class="carousel-indicators" style="left: 25%;top: 20%;">
-						<li data-target="#wizard" data-slide-to="0" class="active" style="margin-left: -5px;">
+						<li data-target=".wizard" data-slide-to="0" class="active" style="margin-left: -5px;">
 							<p style="
 								text-indent: 0%;
 								color: white;
 								font-size: 16px;
 								">1</p>
 						</li>
-						<li style="margin-left: 25px;" data-target="#wizard" data-slide-to="1">
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="1">
 							<p style="
 								text-indent: 0%;
 								color: white;
 								font-size: 16px;
 								">2</p>
 						</li>
-						<li style="margin-left: 25px;" data-target="#wizard" data-slide-to="2">
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="2">
 							<p style="
 								text-indent: 0%;
 								color: white;
 								font-size: 16px;
 								">3</p>
 						</li>
-						<li style="margin-left: 25px;" data-target="#wizard" data-slide-to="3">
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="3">
 							<p style="
 								text-indent: 0%;
 								color: white;
@@ -141,11 +142,72 @@
 						</div>
 					</div>
 					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#wizard" role="button" data-slide="prev">
+					<a class="left carousel-control" href=".wizard" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
 					</a>
-					<a class="right carousel-control" href="#wizard" role="button" data-slide="next" style="left: 60%;">
+					<a class="right carousel-control" href=".wizard" role="button" data-slide="next" style="left: 60%;">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+					</a>
+				</div>
+            </div>
+            <!--iphone div-->
+            
+            <div id="iphoneClues" class="container-fluid visible-xs hiden-md" style="background: rgba(0, 0, 0, 0.50);width: 95%;height: 250px;margin-left: 2%;">
+				<div class="carousel slide wizard" data-ride="carousel" data-interval="false" style="height: 250px;">
+					 <!--Indicators--> 
+					<ul id="status" class="carousel-indicators" style="left: 20%;top: 20%;">
+						<li data-target=".wizard" data-slide-to="0" class="active" style="margin-left: -5px;">
+							<p style="
+								text-indent: 0%;
+								color: white;
+								font-size: 16px;
+								">1</p>
+						</li>
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="1">
+							<p style="
+								text-indent: 0%;
+								color: white;
+								font-size: 16px;
+								">2</p>
+						</li>
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="2">
+							<p style="
+								text-indent: 0%;
+								color: white;
+								font-size: 16px;
+								">3</p>
+						</li>
+						<li style="margin-left: 25px;" data-target=".wizard" data-slide-to="3">
+							<p style="
+								text-indent: 0%;
+								color: white;
+								font-size: 16px;
+								">4</p>
+						</li>
+					</ul>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
+						</div>
+						<div class="item">
+							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
+						</div>
+						<div class="item">
+							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
+						</div>
+						<div class="item">
+							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
+						</div>
+					</div>
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href=".wizard" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href=".wizard" role="button" data-slide="next" style="left: 85%;">
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 					</a>
@@ -160,5 +222,6 @@
 				END EVENT </button>
 				<br>  
 			</div>
+           
 		</div>
 	</body>

@@ -28,6 +28,7 @@ class Reservation extends CI_Controller {
 	{
 //		$this->load->view('reservation_view');
                 $this->load->view('map_view');
+//                $this->load->view('signin');
 	}
 
 	public function menu()

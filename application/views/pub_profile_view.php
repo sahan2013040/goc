@@ -19,7 +19,29 @@
              console.log("another device");
          }
         });
-      </script>       
+      </script> 
+      <style type="text/css">
+        /*.modal-content {
+            background:url('../images/paperScroll.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }*/
+
+        .modal:before {
+          content: '';
+          display: inline-block;
+          /*height: 100%;*/
+          vertical-align: middle;
+          /*margin-right: -4px;*/
+        }
+
+        .modal-dialog {
+          /*display: inline-block;*/
+          text-align: left;
+          vertical-align: middle;
+          /*margin-left:250px;*/
+        }
+      </style>   
    </head>
    <body>
       <img src="../images/logo_iPhone.png" width="100%" height="80%">
@@ -127,8 +149,66 @@
           <br>
          <div id="pubInfo" style="color: white;">
            In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
-         </div> 
-         <button type="submit" class="btn btn-secondary btn-lg btn-block button">
-              CREATE EVENT </button>
+         </div>          
        </div>
+     <div class="container-fluid visible-xs hiden-md">
+        <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" href="#createEvent">
+              CREATE EVENT 
+          </button>
+     <div id="createEvent" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color:transparent;">                 
+                    <div class="modal-body">
+                        <h2 class="title col-centered" style="text-align:start;"> CREATE   EVENT</h2>
+                        <br>
+                        <div class="form-group col-md-6">                         
+                          <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME">
+                        </div>
+                        
+                        <div class= "row">  
+                          <div class="col-xs-6">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 5px solid 
+                              black;">Email</button>
+                           </div>
+                          <div class="col-xs-6">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
+                                data-dismiss="modal" style="border: 5px solid black;">Cancel</button>
+                          </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4">
+     <button type="submit" class="btn btn-secondary btn-lg btn-block button " data-toggle="modal" href="#createEventiPad">
+              CREATE EVENT 
+          </button>
+     <div id="createEventiPad" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color:transparent;">                 
+                    <div class="modal-body">
+                        <h2 class="title col-centered" style="text-align:center;"> CREATE   EVENT</h2>
+                        <br>
+                        <div class="form-group col-md-8" >                         
+                          <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME"
+                                 style="margin-left:25%; margin-top:25%;">
+                        </div>
+                        
+                        <div class= "row">  
+                          <div class="col-xs-6" style="margin-top:10%; margin-left:10%;">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 5px solid 
+                              black; width:75%;">Email</button>
+                           </div>
+                          <div class="col-xs-6" style="margin-left:50%;">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
+                                data-dismiss="modal" style="border: 5px solid black;width:75%;margin: -20% 0%;">Cancel</button>
+                          </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
    </body>

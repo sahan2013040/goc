@@ -39,6 +39,7 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+    font-size: 20px;
 }
 .form-actions {
     margin: 0;
@@ -183,17 +184,13 @@ button em.leftImage {
     border-radius: 20px;
 }
 
-/*.modal-body {
+.modal-body {
     background-image: url('../images/paperScroll.png');
     background-repeat: no-repeat;
     background-size: contain;
-<<<<<<< HEAD
-    height: auto;
-=======
-    height: 300px;
->>>>>>> ac472075aa84476191873de36209927185959948
+    height: 1000px;
     width: auto;
-}*/
+}
 
 
 .carousel-inner > .item > img,
@@ -311,9 +308,9 @@ input[type="checkbox"] {
     font-size: 200%;
 }
 
-@font-face {
+/*@font-face {
     url(../fonts/Game_of_Thrones.ttf);
-}
+}*/
 /*progress indicator css*/
 [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 
@@ -352,21 +349,21 @@ a:active {
 }
 
 /* scrollable items */
-#wizard .items {
+.wizard .items {
     width:20000em;
     clear:both;
     position:absolute;
 }
 
 /* single item */
-#wizard .page {	
+.wizard .page {	
     padding:20px 30px;
     width:730px;
     float:left;
 }
 
 /* title */
-#wizard h2 {
+.wizard h2 {
     border-bottom:1px dotted #ccc;
     font-size:22px;
     font-weight:normal;
@@ -374,7 +371,7 @@ a:active {
     padding-bottom:15px;
 }
 
-#wizard h2 em {
+.wizard h2 em {
     display:block;
     font-size:14px;
     color:#666;
@@ -383,35 +380,35 @@ a:active {
 }
 
 /* input fields */
-#wizard ul {
+.wizard ul {
     padding:0px !important;
     margin:0px !important;
 }
 
-#wizard li {
+.wizard li {
     list-style-type:none;
     list-style-image:none;
     margin-bottom:25px;
 }
 
-#wizard label {
+.wizard label {
     font-size:16px;
     display:block;
 }
 
-#wizard label strong {
+.wizard label strong {
     color:#789;
     position:relative;
     top:-1px;
 }
 
-#wizard label em {
+.wizard label em {
     font-size:11px;
     color:#666;
     font-style:normal;
 }
 
-#wizard .text {
+.wizard .text {
     width:100%;
     padding:5px;
     border:1px solid #ccc;
@@ -419,13 +416,13 @@ a:active {
     letter-spacing:1px;
 }
 
-#wizard select {
+.wizard select {
     border:1px solid #ccc;
     width:94%;
     padding:4px;
 }
 
-#wizard label span {
+.wizard label span {
     color:#b8128f;
     font-weight:bold;
     position:relative;
@@ -433,16 +430,16 @@ a:active {
     font-size:20px;
 }
 
-#wizard .double label {
+.wizard .double label {
     width:50%;
     float:left;
 }
 
-#wizard .double .text {
+.wizard .double .text {
     width:93%;
 }
 
-#wizard .clearfix {
+.wizard .clearfix {
     clear:left;
     padding-top:10px;
 }
@@ -469,11 +466,11 @@ a:active {
     z-index:2;
 }
 
-#wizard .error {
+.wizard .error {
     border:1px solid red;
 }
 
-#wizard #status {
+.wizard #status {
     height:7px;
     background:#5f5f5f;
     width: 190px;
@@ -507,13 +504,12 @@ a:active {
     font-weight:normal;
 }
 
-
 #status li.active p {
     color: #b51994;
 }
+
 .second {
   display: none;
-
 }
 
 .goldenText {
