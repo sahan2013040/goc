@@ -14,9 +14,40 @@
     <body>
         <?php $this->view('template'); ?>
 
-        <div id="ipadMap" class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4" style="margin-top: 30px"></div>
+        <div id="ipadMap" class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4" style="margin-top: 30px">
+            
+        </div>
 
-        <div id="iphoneMap" class="container-fluid visible-xs hiden-md"></div>
+        <div id="iphoneMap" class="container-fluid visible-xs hiden-md">
+            
+        </div>
+        
+        <div id="myModalIpad" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color:transparent;">                 
+                    <div class="modal-body">
+                        <br><br>
+                        <h2 id="poiHeadingIpad" class="title col-centered"></h2>
+                        <br>
+                        <p id="poiTextIpad" style="text-align: center; color:white;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="myModalIphone" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color:transparent;">                 
+                    <div class="modal-body" style="height: 300px">
+                        <br><br>
+                        <h2 id="poiHeadingIphone" class="title col-centered"></h2>
+                        <br>
+                        <p id="poiTextIphone" style="text-align: center; color:white;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script>
             var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
             var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
@@ -75,9 +106,18 @@
                                 infowindow.open(map, repubMarker);
                             }
                             else {
-                                $('#myModal').modal('toggle');
-                                $('#poiHeading').html(repubMarker.title);
-                                $('#poiText').html(locations[4][5]);
+                                if (isiPad) {
+                                    $('#myModalIpad').modal('toggle');
+                                    $('#poiHeadingIpad').html(repubMarker.title);
+                                    $('#poiTextIpad').html(locations[4][5]);
+                                } else if (isiPhone) {
+                                    $('#myModalIphone').modal('toggle');
+                                    $('#poiHeadingIphone').html(repubMarker.title);
+                                    $('#poiTextIphone').html(locations[4][5]);
+                                } else {
+                                    console.log("another device");
+                                }
+                                
                             }
                         };
                     })(repubMarker, content, infowindow));
@@ -98,17 +138,6 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRfh9OTwNLMx9lFm18pWRbgXRs2Rd1h4o&callback=initMap">
         </script>
         
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content" style="background-color:transparent;">                 
-                    <div class="modal-body">
-                        <br><br>
-                        <h2 id="poiHeading" class="title col-centered"></h2>
-                        <br>
-                        <p id="poiText" style="text-align: center; color:white;"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </body>
 </html>
