@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <script src="../js/jquery-3.1.1.min.js"></script>
-        <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="/goc/goc/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/goc/goc/css/style.css">
+        <script src="/goc/goc/js/jquery-3.1.1.min.js"></script>
+        <script src="/goc/goc/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="/goc/goc/js/bootstrap.js"></script>
 
         <script type="application/javascript">
             var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -17,7 +17,8 @@
 
             } else if (isiPhone){
             console.log("iphone ");
-                $('#signUp').hide();
+                $('#signInIphone').show();
+                    $('#signUpIphone').hide();
             } else {
             console.log("another device");
 
@@ -41,6 +42,7 @@
             function signIn(){
                 if (isiPhone){
                     console.log("signin");
+                    
                     $('#signInIphone').show();
                     $('#signUpIphone').hide();
                 } else {
@@ -50,22 +52,20 @@
                 
             }
             
-            fucntion onScan(param1, param2){
-                console.log("param1 :"+param1+" param2:"+param2);
-            }
+            
         </script>    
     </head>
     <body>
         
-        <img src="../images/logo_iPhone.png" width="100%" height="80%">
+        <img src="/goc/goc/images/logo_iPhone.png" width="100%" height="80%">
         <div id="ipadM" class="container-fluid visible-md hiden-xs" style="margin-top: 30px">
             <div id="signInIpad" class="col-md-6">
                 <br>
-                <input id="fblogin_Btn" type="image" src="../images/fblogin.png" width="100%" height="70px">
+                <input id="fblogin_Btn" type="image" src="/goc/goc/images/fblogin.png" width="100%" height="70px">
                 <br><br>
-                <input id="glogin_Btn" type="image" src="../images/glogin.png" width="100%" height="70px">
+                <input id="glogin_Btn" type="image" src="/goc/goc/images/glogin.png" width="100%" height="70px">
                 <br><br>
-                <input id="twitterlogin_Btn" type="image" src="../images/twitterlogin.png" width="100%" height="60px">
+                <input id="twitterlogin_Btn" type="image" src="/goc/goc/images/twitterlogin.png" width="100%" height="60px">
                 <br><br>
                 <hr>
 
@@ -123,11 +123,11 @@
             
            <div id="signInIphone">
                 <br>
-                <input id="fblogin_Btn" type="image" src="../images/fblogin.png" width="100%" height="70px">
+                <input id="fblogin_Btn" type="image" src="/goc/goc/images/fblogin.png" width="100%" height="70px">
                 <br><br>
-                <input id="glogin_Btn" type="image" src="../images/glogin.png" width="100%" height="70px">
+                <input id="glogin_Btn" type="image" src="/goc/goc/images/glogin.png" width="100%" height="70px">
                 <br><br>
-                <input id="twitterlogin_Btn" type="image" src="../images/twitterlogin.png" width="100%" height="60px">
+                <input id="twitterlogin_Btn" type="image" src="/goc/goc/images/twitterlogin.png" width="100%" height="60px">
                 <br><br>
                 <hr>
 
@@ -180,30 +180,5 @@
                 </div>
             </div>
         </div>
-<!--        <img src="../images/logo_iPhone.png" width="100%" height="80%">
-        <div id="iphoneM" class="container-fluid visible-xs hiden-md">
-            
-        </div>-->
-        <!--    <div id="i"></div>
-        
-            <div data-role="page">
-                <div data-role="main" class="ui-content">
-                    <form method="post" action="">
-                        <div class="ui-input-text ui-shadow-inset ui-corner-all ui-btn-shadow ui-body-c">
-                            <input type="email" name="uname" id="uname" placeholder="Username"
-                               class="ui-input-text" style="border: 2px solid white; color:white;" required> </div>
-                        <div class="ui-input-text ui-shadow-inset ui-corner-all ui-btn-shadow ui-body-c">
-                            <input style="border: 2px solid white; color:white;" type="password" name="password" id="password"
-                                   placeholder="Password" required> </div>
-                    </form>
-                </div>
-            </div>
-        
-        
-            <div>
-                <form action="<?php echo base_url(); ?>index.php/Welcome/signIn">
-                    <button type="submit" value="Continue">Continue</button>
-                </form>
-            </div>-->
 
     </body>
