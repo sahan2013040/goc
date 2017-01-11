@@ -85,7 +85,31 @@
                     zoom: zooming,
                     draggable: false
                 });
+                
+                var userInfoWindow = new google.maps.InfoWindow({map: map});
 
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            userInfoWindow.setPosition(pos);
+            userInfoWindow.setContent('Location found.');
+//            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      
+
+      
+      
                 for (i = 0; i < locations.length; i++) {
 
                     repubMarker = new google.maps.Marker({
@@ -124,6 +148,13 @@
 //                    repubMarker.addListener('click', toggleBounce);
                 }
             }
+            
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        userInfoWindow.setPosition(pos);
+        userInfoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
 
 //            function toggleBounce() {
 //                if (marker.getAnimation() !== null) {
@@ -137,7 +168,6 @@
         <script async defer 
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRfh9OTwNLMx9lFm18pWRbgXRs2Rd1h4o&callback=initMap">
         </script>
-        
         
     </body>
 </html>

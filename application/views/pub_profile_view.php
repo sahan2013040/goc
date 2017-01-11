@@ -44,44 +44,7 @@
       </style>   
    </head>
    <body>
-      <img src="../images/logo_iPhone.png" width="100%" height="80%">
-      <div id="ipadM" class="menu opened container-fluid visible-md hiden-xs" style="margin-top: 30px">
-      <br>
-      <img src="../images/user.png" id="userImg" width="50%" height="30%">
-      <label class="username"> John Snow </label>
-      <ul>
-         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="ctBtnL" class="leftImage"> </em> Create  Treasure  Hunt
-               <!-- <em id="ctBtnR" class='rightImage'></em> --> </button>
-         </li>
-         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="stBtnL" class="leftImage"> </em> Start  Treasure  Hunt <!-- <em class='rightImage'> --></em>
-            </button>
-         </li>
-         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="profileBtnL" class="leftImage"> </em> Profile <!-- <em class='rightImage'></em> --> </button>
-         </li>
-         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
-               <em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> --></em> </button>
-         </li>
-         </li>
-      </ul>
-   </div>
-
-   <div id="iphoneM" class="container-fluid visible-xs hiden-md">
-       <table width="90%" cellspacing="0" cellpadding="0" border="0" id="Table_01">
-          <tr>
-             <td><a href="#"><img width="60%" height="14.5%" alt="" src="../images/ct.png"/></a></td>
-             <td><a href="#"><img width="60%" height="15%" alt="" src="../images/st.png"/></a></td>
-             <td><a href="#"><img width="60%" height="15%" alt="" src="../images/person.png"/></a></td>
-             <td><a href="#"><img width="250%" height="65%" alt="" src="../images/help.png"/></a></td>
-          </tr>
-       </table>
-   </div>
+      <?php $this->view('template'); ?>
 
       <div id="content" class="container-fluid col-md-8 col-md-push-4"> 
          <div class="container-fluid visible-md hiden-xs">   
@@ -159,7 +122,8 @@
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color:transparent;">                 
                     <div class="modal-body">
-                        <h2 class="title col-centered" style="text-align:start;"> CREATE   EVENT</h2>
+                        <br><br>
+                        <h2 class="title col-centered" style="text-align:start; padding-left: 70px"> CREATE   EVENT</h2>
                         <br>
                         <div class="form-group col-md-6">                         
                           <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME">
@@ -167,12 +131,12 @@
                         
                         <div class= "row">  
                           <div class="col-xs-6">
-                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 5px solid 
-                              black;">Email</button>
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid 
+                              black; height:40px;">Invite</button>
                            </div>
                           <div class="col-xs-6">
                             <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
-                                data-dismiss="modal" style="border: 5px solid black;">Cancel</button>
+                                data-dismiss="modal" style="border: 3px solid black; height:40px;">Cancel</button>
                           </div>
                         </div>   
                     </div>
@@ -189,7 +153,7 @@
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color:transparent;">                 
                     <div class="modal-body">
-                        <h2 class="title col-centered" style="text-align:center;"> CREATE   EVENT</h2>
+                        <h2 class="title col-centered" style="text-align:center; "> CREATE   EVENT</h2>
                         <br>
                         <div class="form-group col-md-8" >                         
                           <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME"
@@ -198,12 +162,12 @@
                         
                         <div class= "row">  
                           <div class="col-xs-6" style="margin-top:10%; margin-left:10%;">
-                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 5px solid 
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid 
                               black; width:75%;">Email</button>
                            </div>
                           <div class="col-xs-6" style="margin-left:50%;">
                             <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
-                                data-dismiss="modal" style="border: 5px solid black;width:75%;margin: -20% 0%;">Cancel</button>
+                                data-dismiss="modal" style="border: 3px solid black;width:75%;margin: -20% 0%;">Cancel</button>
                           </div>
                         </div>   
                     </div>

@@ -196,6 +196,7 @@ button em.leftImage {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     width: 85%;   
+    height: 450px;
     margin: auto;
 }
 #pubInfo{
@@ -450,21 +451,6 @@ a:active {
 }
 */
 
-/* validation error message bar */
-#drawer {
-    _background-color:#fff;
-    overflow:visible;
-    position:fixed;
-    left:0;
-    top:0;
-    text-align:center;
-    padding:15px;
-    font-size:18px;
-    border-bottom:2px solid #789;
-    width:100%;
-    display:none;
-    z-index:2;
-}
 
 .wizard .error {
     border:1px solid red;
@@ -523,3 +509,73 @@ a:active {
     left:50%;
     transform: translate(-50%,-50%);
 }
+
+.roundabout-holder {
+    padding: 0;
+	margin: 0 auto;
+	height: 300px;
+	width: 620px;
+}
+		
+.roundabout-moveable-item {			
+    cursor: pointer;
+	border:1px solid black;
+	display:block;
+}
+
+.roundabout-moveable-item img {
+	height: 100%;
+	width: 100%;
+}		
+
+.roundabout-in-focus {
+    cursor: auto;
+}		
+
+#carousel li {
+/*height: 580px;*/
+/*width: 408px;*/
+box-shadow: 0 0 10px #000;
+text-align: center;
+cursor: pointer;
+overflow: hidden;
+background: #000;
+  opacity: 1!important;
+}
+
+#carousel li.roundabout-in-focus:hover span {
+display: block;
+z-index: 1;
+}
+
+#carousel li img {
+  opacity: 0.65;
+}
+
+#carousel li.roundabout-in-focus{
+cursor: default;
+/*height: 500px;*/
+}
+
+#carousel li.roundabout-in-focus img {
+opacity: 1!important;
+}
+#carousel li.roundabout-in-focus:hover img {
+opacity: .5!important;
+}
+
+    #carousel li span a.preview {
+    background: #BD3B3C;
+    border-radius: 5px 0 0 5px;
+    }
+    #carousel li span a:hover.preview {
+    background: #CE4A4B;
+    }
+    #carousel li span a.details {
+    background: #A28E5C;
+    border-radius: 0 5px 5px 0;
+    }
+    #carousel li span a:hover.details {
+    background: #B8A169;
+    }
+
