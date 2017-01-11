@@ -39,5 +39,8 @@ class Profile extends CI_Controller {
 		$this->load->view('profile_view');
 	}
 
-	
+	public function signIn()
+    {
+        $this->load->view('signIn');
+    }
 }
