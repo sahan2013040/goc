@@ -451,7 +451,6 @@ a:active {
 
 /* validation error message bar */
 #drawer {
-    background:#fff url(/media/img/gradient/h80.png) repeat-x scroll 0 0;
     _background-color:#fff;
     overflow:visible;
     position:fixed;
@@ -511,4 +510,16 @@ a:active {
 .second {
   display: none;
 
+}
+
+.goldenText {
+    color: gold;
+    font-size: 30px;
+}
+
+.deadCenter {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
