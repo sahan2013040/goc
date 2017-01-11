@@ -12,7 +12,7 @@
     <div class="row container-fluid" style="display: inline" align="center">
         <img class="img-circle col-md-4 col-xs-4 col-xs-push-0" src="../../images/crown.png" width="10%" height="10%"
              style="max-height: 20%; max-width: 20%;">
-        <p class="goldenText col-md-4 col-xs-4 col-xs-push-1" style="margin-top: margin: auto; 10px; "> 10,000 </p>
+        <p class="goldenText col-md-4 col-xs-4 col-xs-push-1" style="margin-top: 10px; "> 10,000 </p>
         <img class="img-circle col-md-4 col-xs-4 col-xs-push-3" src="../../images/crown.png" width="10%" height="10%"
              style="max-height: 20%; max-width: 20%;">
     </div>
