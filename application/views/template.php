@@ -54,6 +54,23 @@
             /**
              * ////////////////////////////////////////////////////////////////////////////
              */
+            $('#profile_Btn').click(function () {
+                $(this).attr("src", "/goc/images/menu_buttons/darkprofile.png");
+                $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
+                $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
+                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile');
+            });
+
+            $('#profileBtipadM').click(function () {
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile');
+            });
+
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            /**
+             * ////////////////////////////////////////////////////////////////////////////
+             */
             $('#help_Btn').click(function () {
                 $(this).attr("src", "/goc/images/menu_buttons/darkhelp.png");
                 $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
