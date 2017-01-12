@@ -22,19 +22,19 @@
 
     <div class="visible-xs hidden-md pre-scrollable" style="overflow: auto">
         <?php
-        //        foreach ( as $row){
-        //
-        //        }
-        echo "<hr>" .
-            "<div class='row justify-content-md-center'>" .
-            "<div class='title col-xs-7 col-md-7'  style='font-size: 200%'>" .
-            "Meet Up" .
-            "</div>" .
-            "<div class='col-xs-5 col-md-5'>" .
-            "<img class='' src='/goc/images/rightarrow.png' width='20%' height='20%'>" .
-            "</div>" .
-            "</div><hr><br>";
+            foreach ($happenings as $row) {
+                echo "<hr>" .
+                    "<div class='row justify-content-md-center'>" .
+                    "<div class='title col-xs-7 col-md-7'  style='font-size: 200%'>" .
+                    $row->name .
+                    "</div>" .
+                    "<div class='col-xs-5 col-md-5'>" .
+                    "<img class='' src='/goc/images/rightarrow.png' width='20%' height='20%'>" .
+                    "</div>" .
+                    "</div><hr><br>";
+            }
         ?>
+
     </div>
 
 
@@ -47,19 +47,19 @@
 
     <div class="col-xs-12 col-md-12 visible-md hidden-xs" style="margin-top: 10px">
         <?php
-        //        foreach ( as $row){
-        //
-        //        }
-        echo
-            "<div class='col-xs-4 col-md-4 text-center' 
+        foreach ($happenings as $row) {
+            echo
+                "<div class='col-xs-4 col-md-4 text-center' 
                     style='background: url(/goc/images/brown_paper.jpg); height: 150px;' >" .
                 "<p class='' style='font-family: goc;  margin-top: 45px'>" .
-                    "Pub Crawl" .
+                $row->name .
                 "</p>" .
                 "<p>" .
-                    "<b>Invited by: Sahan Perera</b>" .
+                "<b>Invited by: </b>" .
                 "</p>" .
-            "</div>";
+                "</div>";
+        }
+
         ?>
     </div>
 
