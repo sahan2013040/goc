@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html lang="en">
 	<head>
 		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+                <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
                 <link rel="stylesheet" type="text/css" href="/goc/css/jquery.scrollable.css" />
                 <script src="/goc/js/jquery-3.1.1.min.js"></script>
                 <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
@@ -98,14 +100,27 @@
                                         $('#cluesolvedmodal').modal('toggle');
                                         $("#4").css("background","green");
                                     }
-			             }
-                                    
-                                    
-//                                    
+			             }                                   
                                 }
 		</script>   
 	</head>
 	<body>
+                <?php 
+                foreach ($clues as $clue) {
+//                    echo $clue->clue_id;
+                 } ?>
+            
+<!--            <script type="text/javascript"> 
+            
+            
+            console.log('<?php echo $clue->clue_1; ?>');
+//            $('#iphoneClue01').text('<?php echo $clue->clue_1; ?>');
+//            document.getElementById("iphoneClue01").innerHTML = '<?php echo $clue->clue_1; ?>';
+            
+            </script>               -->
+            
+                
+            
 		<?php $this->view('template'); ?>
 		
 		<div id="content" class="container-fluid col-md-8 col-md-push-4">
@@ -147,19 +162,27 @@
 						</li>
 					</ul>
 					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<p align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
+                                        <br><br><br>
+                                        <div class="carousel-inner">
+                                            
+                                            <div class="item active">
+                                             <?php 
+                                                    foreach ($clues as $clue) {
+//                                                  echo $clue->clue_id;
+                                                    echo '<p id="ipadClue01" align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">'.$clue->clue_1.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="ipadClue02" align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">'.$clue->clue_2.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="ipadClue03" align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">'.$clue->clue_3.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="ipadClue04" align="center" style="margin: 10% 40% 10% 15%;color:#fff;font-family:Arial;font-size:20px">'.$clue->clue_4.'</p>';    
+                                                    echo '</div>';
+                                                    
+                                                    } ?>
+						
 					</div>
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href=".wizard" role="button" data-slide="prev">
@@ -210,17 +233,23 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
-						<div class="item">
-							<p align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">Go through the place, that hosts the chairs,<br>The price is hidden on the ???? </p>
-						</div>
+                                                    <?php 
+                                                    foreach ($clues as $clue) {
+//                                                  echo $clue->clue_id;
+                                                    echo '<p id="iphoneClue01" align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">'.$clue->clue_1.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="iphoneClue01" align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px;">'.$clue->clue_2.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="iphoneClue01" align="center" style="margin: 30% 20% 10% 19%; color:#fff; font-family:Arial; font-size:20px; overflow: scroll;">'.$clue->clue_3.'</p>';    
+                                                    echo '</div>';
+                                                    echo '<div class="item">';
+                                                    echo '<p id="iphoneClue01" align="center" style="margin: 30% 20% 10% 19%;color:#fff;font-family:Arial;font-size:20px; over">'.$clue->clue_4.'</p>';    
+                                                    echo '</div>';
+                                                    
+                                                    } ?>
+						
 					</div>
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href=".wizard" role="button" data-slide="prev">
@@ -235,8 +264,8 @@
 			</div>
 			<br> <br>
 			<div class="col-md-12">
-				<button type="submit" onclick="scanQR()" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid;">
-                                    <img src="/goc/goc/images/scanqr.png" height="50px" width="50px" style="margin: 0px 10px 0px -50px;">SCAN QR CODE </button>
+				<button type="submit" onclick="scanQR()" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid; over">
+                                    <img src="/goc/images/scanqr.png" height="50px" width="50px" style="margin: 0px 10px 0px -50px;">SCAN QR CODE </button>
 				<br>  
                                 <button type="submit" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid;">
 				END EVENT </button>

@@ -3,10 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Clue extends CI_Controller {
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->model("clueModel");
     }
     
     /**
@@ -26,13 +27,14 @@ class Clue extends CI_Controller {
 	 */
 	public function index()
 	{
-        $this->load->view('solve_clues_view');
+        $postData["clues"] = $this->clueModel->fetch_clues();
+        $this->load->view("solve_clues_view", $postData);
+//        $this->load->view("solve_clues_view");
+        
 	}
 
 	public function menu()
 	{
 		$this->load->view('iphone_menu');
-	}
-	
-
+	}        
 }
