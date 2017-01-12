@@ -7,6 +7,7 @@ class MenuController extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->model("eventModel");
     }
 
     public function index()
@@ -21,7 +22,8 @@ class MenuController extends CI_Controller
 
     public function allTH()
     {
-        $this->load->view('happenings');
+        $data["happenings"] = $this->eventModel->fetch_happenings();
+        $this->load->view('happenings', $data);
     }
 
     public function startTH()
