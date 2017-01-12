@@ -12,10 +12,6 @@
             var height = $(window).height() - 80;
             $('#content').height(height - 10);
 
-//            $('#createTH_Btn').click();
-//            $('#startTH_Btn').click();
-//            $('#profile_Btn').click();
-
             /**
              * ////////////////////////////////////////////////////////////////////////////
              */
@@ -90,6 +86,7 @@
                 $('#content').load(url);
             }
 
+            $('#createTH_Btn').trigger("click");
         });
     </script>
 </head>
