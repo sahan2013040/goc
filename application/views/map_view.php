@@ -22,31 +22,26 @@
             
         </div>
         
-        <div id="myModalIpad" class="modal fade" role="dialog">
+        <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color:transparent;">                 
                     <div class="modal-body">
                         <br><br>
-                        <h2 id="poiHeadingIpad" class="title col-centered"></h2>
+                        <h2 id="poiHeading" class="title col-centered" style="text-align:center; "></h2>
                         <br>
-                        <p id="poiTextIpad" style="text-align: center; color:white;"></p>
+                        <p id="poiText" style="text-align: center; color:white;"></p>
+                        <!--<div class= "row">-->  
+                          <div class="col-centered" style="margin-bottom:2%; margin-left:10%; padding-left: 90px;">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" data-dismiss="modal" style="border: 1px solid 
+                              black; width:50%; height:30px; margin-bottom:10px">Ok</button>
+                           </div>
+                        <!--</div>-->   
                     </div>
                 </div>
             </div>
         </div>
         
-        <div id="myModalIphone" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content" style="background-color:transparent;">                 
-                    <div class="modal-body" style="height: 300px">
-                        <br><br>
-                        <h2 id="poiHeadingIphone" class="title col-centered"></h2>
-                        <br>
-                        <p id="poiTextIphone" style="text-align: center; color:white;"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
         <script>
             var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -130,17 +125,9 @@
                                 infowindow.open(map, repubMarker);
                             }
                             else {
-                                if (isiPad) {
-                                    $('#myModalIpad').modal('toggle');
-                                    $('#poiHeadingIpad').html(repubMarker.title);
-                                    $('#poiTextIpad').html(locations[4][5]);
-                                } else if (isiPhone) {
-                                    $('#myModalIphone').modal('toggle');
-                                    $('#poiHeadingIphone').html(repubMarker.title);
-                                    $('#poiTextIphone').html(locations[4][5]);
-                                } else {
-                                    console.log("another device");
-                                }
+                                $('#myModal').modal('toggle');
+                                $('#poiHeading').html(repubMarker.title);
+                                $('#poiText').html(locations[4][5]);
                                 
                             }
                         };
