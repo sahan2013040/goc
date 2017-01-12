@@ -30,6 +30,8 @@
 		<script type="text/javascript" src="/goc/js/raphael.min.js"></script>
 		<script type="text/javascript" src="/goc/js/wheelnav.min.js"></script> 
 		<script src="/goc/js/action.js"></script>
+        <script src="/goc/js/myFunctions.js"></script>
+
 		<script type="application/javascript">
 			$( document ).ready(function() {
 			   var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -45,6 +47,14 @@
 			  var piemenu = new wheelnav('piemenu');
 			  piemenu.wheelRadius = piemenu.wheelRadius * 0.83;
 			  piemenu.createWheel();
+                
+                
+            $('#newsletterBtn').click(function () {
+             loadMyView('<?php echo base_url() ?>index.php/menuController/newsletter');
+            });
+             $('#selectCharacterBtn').click(function () {
+                loadMyView('<?php echo base_url() ?>index.php/menuController/selectCharacter');
+            });
 			  });
 		</script>   
 	</head>
