@@ -38,11 +38,11 @@
                 $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
                 $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
                 $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
-                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/startTH');
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/allTH');
             });
 
             $('#stBtipadM').click(function () {
-                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/startTH');
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/allTH');
             });
 
             ///////////////////////////////////////////////////////////////////////////////////

@@ -19,6 +19,11 @@ class MenuController extends CI_Controller
         $this->load->view('map_view');
     }
 
+    public function allTH()
+    {
+        $this->load->view('happenings');
+    }
+
     public function startTH()
     {
         $this->load->view('startTreasureHunt');
