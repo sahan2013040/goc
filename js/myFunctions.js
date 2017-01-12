@@ -1,3 +1,4 @@
 function loadMyView(url) {
-    $('#content').load(url);
+    $('#content').load(url);    
+    
 }
