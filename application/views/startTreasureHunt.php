@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-<?php $this->view('template'); ?>
-
-<div class="container-fluid col-md-8 col-md-push-4" style="margin-top: 30px">
-
     <div class="container-fluid" align="center">
         <table cellspacing="0" cellpadding="0" border="0" class="text-center">
             <tr class="text-center">
@@ -109,7 +100,3 @@
                 > Start Event
         </button>
     </div>
-
-</div>
-</body>
-</html>

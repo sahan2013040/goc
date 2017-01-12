@@ -19,17 +19,17 @@
             /**
              * ////////////////////////////////////////////////////////////////////////////
              */
-//            $('#createTH_Btn').click(function () {
-//                $(this).attr("src", "/goc/images/menu_buttons/darkcreate.png");
-//                $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
-//                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
-//                $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
-//                loadPageToDiv('<?php //echo base_url() ?>//index.php/menuController/startTH');
-//            });
-//
-//            $('#ctBtipadM').click(function () {
-//                loadPageToDiv('<?php //echo base_url() ?>//index.php/menuController/help');
-//            });
+            $('#createTH_Btn').click(function () {
+                $(this).attr("src", "/goc/images/menu_buttons/darkcreate.png");
+                $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
+                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
+                $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/startTH');
+            });
+
+            $('#ctBtipadM').click(function () {
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/help');
+            });
 
             ///////////////////////////////////////////////////////////////////////////////////
 
