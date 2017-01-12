@@ -69,12 +69,15 @@
                                         $("#1_ipad").css("background","green");
                                     }
                                     else if(qrcode === 2){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#2_ipad").css("background","green");
                                     }
                                     else if(qrcode === 3){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#3_ipad").css("background","green");
                                     }
                                     else if(qrcode === 4){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#4_ipad").css("background","green");
                                     }
 			             } else if (isiPhone) {
@@ -84,12 +87,15 @@
                                         $("#1").css("background","green");
                                     }
                                     else if(qrcode === 2){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#2").css("background","green");
                                     }
                                     else if(qrcode === 3){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#3").css("background","green");
                                     }
                                     else if(qrcode === 4){
+                                        $('#cluesolvedmodal').modal('toggle');
                                         $("#4").css("background","green");
                                     }
 			             }

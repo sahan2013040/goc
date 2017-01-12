@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
 </head>
 <body>
+    
 <?php $this->view('template'); ?>
 
 <div class="container-fluid col-md-8 col-md-push-4" style="margin-top: 20px">
@@ -51,10 +54,69 @@
     </div>
 
 <!--    Pay Button-->
-    <button type="submit" class="btn btn-secondary btn-lg btn-block button" style=" display: block;margin: auto;
+<!--<div id="paypal-button" style=" display: block;margin: auto;
+            width: 30%;"></div>-->
+            
+         
+<!--    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=darshana20124-facilitator@live.com&amount=1.99&currency_code=GBP" class="btn btn-secondary btn-lg btn-block button" style=" display: block;margin: auto;
+            width: 50%;">Pay</a>-->
+
+<!--    <button type="submit" class="btn btn-secondary btn-lg btn-block button" style=" display: block;margin: auto;
             width: 50%;">
-        Pay </button>
+        Pay </button>-->
 
 </div>
+   <form id="payment-form" action="" method="POST" style=" display: block;margin: auto; margin-left: 120px;">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_vS6AtWJ469hmCGFWBxGRag1f"
+    data-amount="2000"
+    data-name="Demo Site"
+    data-description="2 widgets ($20.00)"
+    data-image="/128x128.png">
+  </script>
+</form>
+
+    
+<!--    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script>
+    paypal.Button.render({
+    
+        env: 'sandbox', // Optional: specify 'sandbox' environment
+    
+        client: {
+//            sandbox: 'AFcWxV21C7fd0v3bYYYRCpSSRl31AkTZcrAeJ5MvQyW4tyfeIRoLN-Sx'
+            sandbox:'AVaWtm3BLXLqN62gpLKrO0KOneec9Jbbcn6Wf31ZkpRuC2Zpa8Q_hnLIXkupTEKr5RTWtQ543Z6rrbyU'
+            
+        },
+
+        payment: function() {
+        
+            var env    = this.props.env;
+            var client = this.props.client;
+        
+            return paypal.rest.payment.create(env, client, {
+                transactions: [
+                    {
+                        amount: { total: '1.00', currency: 'USD' }
+                    }
+                ]
+            });
+        },
+
+        commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+
+        onAuthorize: function(data, actions) {
+        
+            // Optional: display a confirmation page here
+        
+            return actions.payment.execute().then(function() {
+                // Show a success page to the buyer
+                
+            });
+        }
+
+    }, '#paypal-button');
+</script>-->
 </body>
 </html>
