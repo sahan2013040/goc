@@ -9,23 +9,51 @@
     <script src="/goc/js/bootstrap.js"></script>
     <script type="application/javascript">
         $(document).ready(function () {
+            var height = $(window).height() - 80;
+            $('#content').height(height - 10);
 
-            $('#createTH_Btn').click();
-            $('#startTH_Btn').click();
-            $('#profile_Btn').click();
+//            $('#createTH_Btn').click();
+//            $('#startTH_Btn').click();
+//            $('#profile_Btn').click();
+
+            /**
+             * ////////////////////////////////////////////////////////////////////////////
+             */
+//            $('#createTH_Btn').click(function () {
+//                $(this).attr("src", "/goc/images/menu_buttons/darkcreate.png");
+//                $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
+//                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
+//                $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
+//                loadPageToDiv('<?php //echo base_url() ?>//index.php/menuController/startTH');
+//            });
+//
+//            $('#ctBtipadM').click(function () {
+//                loadPageToDiv('<?php //echo base_url() ?>//index.php/menuController/help');
+//            });
+
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            /**
+             * ////////////////////////////////////////////////////////////////////////////
+             */
             $('#help_Btn').click(function () {
-                window.location = '<?php echo base_url().'index.php/menuController/help'  ?>';
-
+                $(this).attr("src", "/goc/images/menu_buttons/darkhelp.png");
+                $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
+                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
+                $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/help');
             });
 
-
-            $('#help_Btn').click(function () {
-                console.log('okkkokokok');
-                if ($(this).attr("src") == "/goc/images/menu_buttons/flathelp.png")
-                    $(this).attr("src", "/goc/images/menu_buttons/darkhelp.png");
-                else
-                    $(this).attr("src", "/goc/images/menu_buttons/flathelp.png");
+            $('#helpBtipadM').click(function () {
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/help');
             });
+
+            ///////////////////////////////////////////////////////////////////////////////////
+
+
+            function loadPageToDiv(url) {
+                $('#content').load(url);
+            }
 
         });
     </script>
@@ -39,21 +67,21 @@
     <label class="username"> John Snow </label>
     <ul>
         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
+            <button id="ctBtipadM" class="btn btn-secondary btn-lg btn-block menubutton">
                 <em id="ctBtnL" class="leftImage"> </em> Create Treasure Hunt
                 <!-- <em id="ctBtnR" class='rightImage'></em> --> </button>
         </li>
         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
+            <button id="stBtipadM" class="btn btn-secondary btn-lg btn-block menubutton">
                 <em id="stBtnL" class="leftImage"> </em> Start Treasure Hunt <!-- <em class='rightImage'> --></em>
             </button>
         </li>
         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
+            <button id="profileBtipadM" class="btn btn-secondary btn-lg btn-block menubutton">
                 <em id="profileBtnL" class="leftImage"> </em> Profile <!-- <em class='rightImage'></em> --> </button>
         </li>
         <li>
-            <button class="btn btn-secondary btn-lg btn-block menubutton">
+            <button id="helpBtipadM" class="btn btn-secondary btn-lg btn-block menubutton">
                 <em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> --></em> </button>
         </li>
     </ul>
@@ -73,6 +101,7 @@
         </tr>
     </table>
 </div>
+<div id="content" class="container-fluid col-md-8 col-md-push-4 pre-scrollable" style="max-height: 90%"></div>
 
 </body>
 </html>
