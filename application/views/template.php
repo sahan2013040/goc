@@ -7,6 +7,7 @@
     <script src="/goc/js/jquery-3.1.1.min.js"></script>
     <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="/goc/js/bootstrap.js"></script>
+     <script src="/goc/js/action.js"></script>
     <script type="application/javascript">
         $(document).ready(function () {
             var height = $(window).height() - 80;
