@@ -103,6 +103,7 @@
                 for (i = 0; i < locations.length; i++) {
 
                     repubMarker = new google.maps.Marker({
+                        id : locations[i][3],
                         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                         icon: locations[i][4],
                         title: locations[i][0],
@@ -110,14 +111,15 @@
                         map: map
                     });
                     var infowindow = new google.maps.InfoWindow();
-                    var content = locations[i][0];
+                    var content = locations[i][3];
 
                     google.maps.event.addListener(repubMarker, 'click', (function(repubMarker, content, infowindow) {
                         return function() {
                             infowindow.setContent(content);
                             console.log(repubMarker.title);
                             if (repubMarker.title === "THE RE.PUB.LK" || repubMarker.title === "Loft Lounge" || repubMarker.title === "Flamingo House" || repubMarker.title === "&Co") {
-                                infowindow.open(map, repubMarker);
+//                                infowindow.open(map, repubMarker);
+                                $('#content').load('<?php echo base_url() ?>index.php/PubProfile?id='+repubMarker.id);
                             }
                             else {
                                 $('#myModal').modal('toggle');

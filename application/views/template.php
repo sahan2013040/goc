@@ -10,7 +10,7 @@
     <script type="application/javascript">
         $(document).ready(function () {
             var height = $(window).height() - 80;
-            $('#content').height(height - 10);
+            $('#content').height(height);
 
             /**
              * ////////////////////////////////////////////////////////////////////////////
@@ -70,7 +70,7 @@
             $('#help_Btn').click(function () {
                 $(this).attr("src", "/goc/images/menu_buttons/darkhelp.png");
                 $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
-                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
+                $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
                 $('#profile_Btn').attr("src", "/goc/images/menu_buttons/flatprofile.png");
                 loadPageToDiv('<?php echo base_url() ?>index.php/menuController/help');
             });

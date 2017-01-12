@@ -2,11 +2,11 @@
 <html lang="en">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
-      <script src="../js/jquery-3.1.1.min.js"></script>
-      <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-      <script src="../js/bootstrap.js"></script>
+      <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+      <script src="/goc/js/jquery-3.1.1.min.js"></script>
+      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
+      <script src="/goc/js/bootstrap.js"></script>
       <script type="application/javascript">
       $( document ).ready(function() {
          var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -44,15 +44,13 @@
       </style>   
    </head>
    <body>
-      <?php $this->view('template'); ?>
 
-      <div id="content" class="container-fluid col-md-8 col-md-push-4"> 
          <div class="container-fluid visible-md hiden-xs">   
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-md-9">
                   <h2 class="title"> PUB NAME </h2> </div>
-                <div class="col-md-3"><img src="../images/favourite.png" width="50%" height="50%"
+                <div class="col-md-3"><img src="/goc/images/favourite.png" width="50%" height="50%"
                   class="img-responsive" ></div>
               </div>
            </div>
@@ -72,19 +70,19 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="../images/pub2.jpg" class="img-responsive" >
+              <img src="/goc/images/pub2.jpg" class="img-responsive" >
             </div>
 
             <div class="item">
-              <img src="../images/pub2.jpg" class="img-responsive" >
+              <img src="/goc/images/pub2.jpg" class="img-responsive" >
             </div>
           
             <div class="item">
-              <img src="../images/pub2.jpg" class="img-responsive" >
+              <img src="/goc/images/pub2.jpg" class="img-responsive" >
             </div>
 
             <div class="item">
-              <img src="../images/pub2.jpg" class="img-responsive" >
+              <img src="/goc/images/pub2.jpg" class="img-responsive" >
             </div>
           </div>
 
@@ -104,7 +102,7 @@
               <div class="row">
                 <div class="col-xs-9">
                   <h2 class="title"> PUB NAME </h2> </div>
-                <div class="col-xs-3"><img src="../images/favourite.png" width="100%" height="100%"
+                <div class="col-xs-3"><img src="/goc/images/favourite.png" width="100%" height="100%"
                   class="img-responsive"></div>
               </div>
            </div>          
@@ -143,7 +141,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
     
     <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4">
      <button type="submit" class="btn btn-secondary btn-lg btn-block button " data-toggle="modal" href="#createEventiPad">
