@@ -1,6 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
+    <script type="application/javascript" src="/goc/js/myFunctions.js"></script>
+    <script type="application/javascript">
+        $('.phoneRow').click(function () {
+            console.log('row clicked: ' + $(this).attr("name"));
+            loadMyView('<?php echo base_url() ?>index.php/huntController/getEvent?id=' + $(this).attr("name"));
+        });
+
+        $('.iPadRow').click(function () {
+            console.log('row clicked: ' + $(this).attr("name"));
+            loadMyView('<?php echo base_url() ?>index.php/huntController/getEvent?id=' + $(this).attr("name"));
+        });
+    </script>
 </head>
 <body>
 
@@ -24,7 +34,7 @@
         <?php
             foreach ($happenings as $row) {
                 echo "<hr>" .
-                    "<div class='row justify-content-md-center'>" .
+                    "<div name='$row->id' class='row justify-content-md-center phoneRow'>" .
                     "<div class='title col-xs-7 col-md-7'  style='font-size: 200%'>" .
                     $row->name .
                     "</div>" .
@@ -49,7 +59,7 @@
         <?php
         foreach ($happenings as $row) {
             echo
-                "<div class='col-xs-4 col-md-4 text-center' 
+                "<div name='$row->id' class='col-xs-4 col-md-4 text-center iPadRow' 
                     style='background: url(/goc/images/brown_paper.jpg); height: 150px;' >" .
                 "<p class='' style='font-family: goc;  margin-top: 45px'>" .
                 $row->name .
@@ -62,6 +72,4 @@
 
         ?>
     </div>
-
 </body>
-</html>
