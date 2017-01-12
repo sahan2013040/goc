@@ -44,7 +44,6 @@
       </style>   
    </head>
    <body>
-
          <div class="container-fluid visible-md hiden-xs">   
            <div style="padding-top:5%;">              
               <div class="row">
@@ -70,20 +69,20 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="/goc/images/pub2.jpg" class="img-responsive" >
+              <img src="<?php echo $pub->image1; ?>" class="img-responsive" >
             </div>
 
             <div class="item">
-              <img src="/goc/images/pub2.jpg" class="img-responsive" >
+              <img src="<?php echo $pub->image2; ?>" class="img-responsive" >
             </div>
           
             <div class="item">
-              <img src="/goc/images/pub2.jpg" class="img-responsive" >
+              <img src="<?php echo $pub->image3; ?>" class="img-responsive" >
             </div>
 
-            <div class="item">
-              <img src="/goc/images/pub2.jpg" class="img-responsive" >
-            </div>
+<!--            <div class="item">-->
+<!--              <img src="--><?php //echo $pub->image1; ?><!--" class="img-responsive" >-->
+<!--            </div>-->
           </div>
 
           <!-- Left and right controls -->
@@ -101,16 +100,14 @@
            <div style="padding-top:5%;">              
               <div class="row">
                 <div class="col-xs-9">
-                  <h2 class="title"> PUB NAME </h2> </div>
+                  <h2 class="title"> <?php echo $pub->name; ?> </h2> </div>
                 <div class="col-xs-3"><img src="/goc/images/favourite.png" width="100%" height="100%"
                   class="img-responsive"></div>
               </div>
            </div>          
         </div>
           <br>
-         <div id="pubInfo" style="color: white;">
-           In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
-         </div>          
+         <div id="pubInfo" style="color: white;"> <?php echo $pub->description; ?> </div>
        </div>
      <div class="container-fluid visible-xs hiden-md">
         <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" href="#createEvent">

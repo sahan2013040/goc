@@ -7,6 +7,7 @@ class PubProfile extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->database();
     }
 
     /**
@@ -26,7 +27,18 @@ class PubProfile extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('pub_profile_view');
+        $id = $this->input->get('id');
+
+        $query = $this->db->query("SELECT * FROM pubs WHERE id=$id");
+
+        $d1 = [];
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $d1 = $row;
+            }
+        }
+        $data['pub'] = $d1;
+		$this->load->view('pub_profile_view', $data);
 	}
 
 	
