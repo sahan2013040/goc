@@ -7,6 +7,7 @@ class Welcome extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->model("userModel");
     }
 
     /**
@@ -32,5 +33,44 @@ class Welcome extends CI_Controller {
 	public function home()
     {
         $this->load->view('template');
+    }
+
+    public function signIn()
+    {
+//        $postData["clues"] = $this->userModel->createUser();
+        $username = $this->input->get('username');
+        $password = $this->input->get('password');
+
+        if($this->userModel->signIn($username, $password) === false){
+            $postData["signIn"] = 'Invalid Credentials';
+            $this->load->view('signIn',$postData);
+        }
+        else if($this->userModel->signIn($username, $password) === true){
+            $postData["signIn"] = 'Signed in successfully';
+            $this->load->view('signIn',$postData);
+        }
+    }
+
+    public function normalSignIn()
+    {
+        $this->load->view('signIn');
+    }
+
+    public function signUp()
+    {
+        $email = $this->input->get('email');
+        $username = $this->input->get('username');
+        $password = $this->input->get('password');
+
+        if($this->userModel->createUser($email, $username, $password) === false){
+            $postData["signUp"] = 'User already exists';
+            $this->load->view('signIn',$postData);
+        }
+        else{
+            $postData["signUp"] = 'Signed up successfully';
+            $this->load->view('signIn',$postData);
+        }
+
+
     }
 }

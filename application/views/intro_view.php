@@ -30,6 +30,10 @@
       });
 
       }(jQuery));
+
+          $("#contiune-Btn").on("click", function () {
+              window.location.href = '<?php echo base_url()?>/index.php/Welcome/normalSignIn';
+          });
      });        
           
       </script>       
@@ -114,8 +118,8 @@
             </li>
           </ul>
         </div>
-        <button type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
-            width: 50%;">
+        <button id="contiune-Btn" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
+            width: 50%;" >
               CONTINUE </button>
     </div>           
         <br> 

@@ -9,6 +9,8 @@
     <script src="/goc/js/bootstrap.js"></script>
     <script src="/goc/js/action.js"></script>
     <script src="/goc/js/myFunctions.js"></script>
+    <script type="text/javascript" src="/goc/js/raphael.min.js"></script>
+    <script type="text/javascript" src="/goc/js/wheelnav.min.js"></script>
     <script type="application/javascript">
         $(document).ready(function () {
             var height = $(window).height() - 80;

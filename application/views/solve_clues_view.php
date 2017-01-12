@@ -105,23 +105,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</script>   
 	</head>
 	<body>
-                <?php 
-                foreach ($clues as $clue) {
-//                    echo $clue->clue_id;
-                 } ?>
-            
-<!--            <script type="text/javascript"> 
-            
-            
-            console.log('<?php echo $clue->clue_1; ?>');
-//            $('#iphoneClue01').text('<?php echo $clue->clue_1; ?>');
-//            document.getElementById("iphoneClue01").innerHTML = '<?php echo $clue->clue_1; ?>';
-            
-            </script>               -->
-            
-                
-            
-		<?php $this->view('template'); ?>
 		
 		<div id="content" class="container-fluid col-md-8 col-md-push-4">
 			<div>
