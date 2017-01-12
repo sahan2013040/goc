@@ -3,20 +3,15 @@
     <head>
         <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <script src="../js/jquery-3.1.1.min.js"></script>
-        <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-        <script src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+        <script src="/goc/js/jquery-3.1.1.min.js"></script>
+        <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="/goc/js/bootstrap.js"></script>
         <meta charset="utf-8">
 
     </head>
     <body>
-        <?php $this->view('template'); ?>
-
-        <div id="ipadMap" class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4" style="margin-top: 30px">
-            
-        </div>
 
         <div id="iphoneMap" class="container-fluid visible-xs hiden-md">
             
@@ -52,11 +47,11 @@
             var choosenDiv;
             var zooming;
             var locations = [
-                ['THE RE.PUB.LK', 6.933841, 79.842164, 1, "../images/repub.png"],
-                ['Loft Lounge', 6.897765, 79.856454, 2, "../images/loft.png"],
-                ['Flamingo House', 6.9112629, 79.8683367, 3, "../images/flamingo.png"],
-                ['&Co', 6.9341542, 79.8409954, 4, "../images/andco.png"],
-                ['Viharamahadevi  Park', 6.9133907, 79.8617401, 5, "../images/poi.png", "The Viharamahadevi Park is a public park located in Colombo, next to the National Museum in Sri Lanka. It is the oldest and largest park of the Port of Colombo."]
+                ['THE RE.PUB.LK', 6.933841, 79.842164, 1, "/goc/images/repub.png"],
+                ['Loft Lounge', 6.897765, 79.856454, 2, "/goc/images/loft.png"],
+                ['Flamingo House', 6.9112629, 79.8683367, 3, "/goc/images/flamingo.png"],
+                ['&Co', 6.9341542, 79.8409954, 4, "/goc/images/andco.png"],
+                ['Viharamahadevi  Park', 6.9133907, 79.8617401, 5, "/goc/images/poi.png", "The Viharamahadevi Park is a public park located in Colombo, next to the National Museum in Sri Lanka. It is the oldest and largest park of the Port of Colombo."]
             ];
 
             $(document).ready(function() {
