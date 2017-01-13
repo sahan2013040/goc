@@ -7,6 +7,7 @@ class Invite extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
+         include 'ChromePhp.php';
     }
 
     /**
@@ -27,7 +28,10 @@ class Invite extends CI_Controller {
 	public function index()
 	{
         $event = $this->input->get('event');
-		$this->load->view('invite_friends_view', array('event'=> $event));
+        $venue = $this->input->get('venue');
+         ChromePhp::log("venue");
+         ChromePhp::log($venue);
+		$this->load->view('invite_friends_view', array('event'=> $event, 'venue'=> $venue));
 	}
 
 	public function menu()

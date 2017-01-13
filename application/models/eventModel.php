@@ -26,5 +26,9 @@ class EventModel extends CI_Model
         }
         return false;
     }
+    
+    public function insertEvent($eventobject){
+    $this->db->insert('event', $eventobject);
+    }
 
 }

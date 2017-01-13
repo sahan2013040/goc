@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
-    <script src="/goc/js/jquery-3.1.1.min.js"></script>
-    <script src="/goc/js/myFunctions.js"></script>
-    <script src="/goc/js/bootstrap.js"></script>
-    <script type="application/javascript">
-        $(document).ready(function () {
-            var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
-            var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
-            if (isiPad) {
-                console.log("ipad ");
-            } else if (isiPhone) {
-                console.log("iphone ");
-            } else {
-                console.log("another device");
-            }
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+      <script src="/goc/js/jquery-3.1.1.min.js"></script>
+      <script src="/goc/js/myFunctions.js"></script>
+      <script src="/goc/js/bootstrap.js"></script>
+      <script type="application/javascript">
+      $( document ).ready(function() {
+         var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
+         var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+         if (isiPad){
+             console.log("ipad ");
+         } else if (isiPhone){
+             console.log("iphone ");
+         } else {
+             console.log("another device");
+         }
 
-            $('#inviteBtn').click(function () {
-                $('body').removeClass('modal-open');
-                $('.modal-backdrop').remove();
-                loadMyView('<?php echo base_url() . '/index.php/Invite?event=' ?>' + $('#eventname').val());
-            });
+         $('#inviteBtn').click(function () {
+             $('body').removeClass('modal-open');
+             $('.modal-backdrop').remove();
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventname').val()+'&venue='+'<?php echo $pub->pub_id; ?>');
+         });
+
+          $('#inviteBtniPad').click(function () {
+             $('body').removeClass('modal-open');
+             $('.modal-backdrop').remove();
+
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventnameiPad').val()+'&venue='+'<?php echo $pub->pub_id; ?>');
+         });
 
             if(<?php echo $pub->favourite; ?> === 1){
                 $('#favourite_Btn').attr("src", "/goc/images/dark_favourite.png");
@@ -83,21 +90,21 @@
             vertical-align: middle;
             /*margin-left:250px;*/
         }
-    </style>
-</head>
-<body>
-<div class="container-fluid visible-md hiden-xs">
-    <div style="padding-top:5%;">
-        <div class="row">
-            <div class="col-md-9">
-                <h2 class="title"> PUB NAME </h2></div>
-            <div class="col-md-3"><img src="/goc/images/favourite.png" width="50%" height="50%"
-                                       class="img-responsive"></div>
-        </div>
-    </div>
-
-</div>
-<br>
+      </style>   
+   </head>
+   <body>
+         <div class="container-fluid visible-md hiden-xs">   
+           <div style="padding-top:2%;">
+              <div class="row">
+                <div class="col-md-9">
+                  <h2 class="title"><?php echo $pub->name; ?></h2> </div>
+                <div class="col-md-3"><img src="/goc/images/favourite.png" width="50%" height="50%"
+                  class="img-responsive" ></div>
+              </div>
+           </div>
+          
+          </div>
+         <br> 
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -186,39 +193,35 @@
         </div>
     </div>
 
-
-    <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4">
-        <button type="submit" class="btn btn-secondary btn-lg btn-block button " data-toggle="modal"
-                href="#createEventiPad">
-            CREATE EVENT
-        </button>
-        <div id="createEventiPad" class="modal fade" role="dialog">
+    </div>
+    <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-2">
+     <button type="submit" class="btn btn-secondary btn-lg btn-block button " data-toggle="modal" href="#createEventiPad">
+              CREATE EVENT 
+          </button>
+     <div id="createEventiPad" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color:transparent;">
                     <div class="modal-body">
                         <h2 class="title col-centered" style="text-align:center; "> CREATE EVENT</h2>
                         <br>
-                        <div class="form-group col-md-8">
-                            <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME"
-                                   style="margin-left:25%; margin-top:25%;">
+                        <div class="form-group col-md-8" >                         
+                          <input type="text" class="form-control" id="eventnameiPad" placeholder="ENTER EVENT NAME"
+                                 style="margin-left:25%; margin-top:25%;">
                         </div>
-
-                        <div class="row">
-                            <div class="col-xs-6" style="margin-top:10%; margin-left:10%;">
-                                <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid
-                              black; width:75%;">Email
-                                </button>
-                            </div>
-                            <div class="col-xs-6" style="margin-left:50%;">
-                                <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav"
-                                        data-dismiss="modal" style="border: 3px solid black;width:75%;margin: -20% 0%;">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
+                        
+                        <div class= "row">  
+                          <div class="col-xs-6" style="margin-top:10%; margin-left:10%;">
+                            <button type="button" id="inviteBtniPad" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid
+                              black; width:75%;">Invite</button>
+                           </div>
+                          <div class="col-xs-6" style="margin-left:50%;">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
+                                data-dismiss="modal" style="border: 3px solid black;width:75%;margin: -20% 0%;">Cancel</button>
+                          </div>
+                        </div>   
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
+   </body>

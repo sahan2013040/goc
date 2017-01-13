@@ -114,30 +114,30 @@
         <div id="carouse-wrap-iphone">
           <ul id="carousel" class="carousel top_slider roundabout-holder" style="margin-top: 75px;padding: 0px;position: relative;height:
                                                                                  300px;width: 400px;">
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
                   <img src="/goc/images/treasure_hunt.jpg" alt="" class="slide" />
               </li>
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/meet_123.jpg" alt="" class="slide" />
               </li>
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/solve.jpg" alt="" class="slide" />
               </li>
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/favourites_got.jpg" alt="" class="slide" />
               </li >
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/fun.jpg" alt="" class="slide" />
               </li>
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/many_more.png" alt="" class="slide" />
               </li>
-              <li style="height:580px;width:408px">
+              <li style="height:500px;width:300px;">
 
                   <img src="/goc/images/cheers.jpg" alt="" class="slide" />
               </li>

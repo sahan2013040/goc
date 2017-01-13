@@ -196,7 +196,7 @@ button em.leftImage {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     width: 85%;   
-    height: 450px;
+    height: 40%;
     margin: auto;
 }
 #pubInfo{
