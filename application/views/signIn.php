@@ -66,16 +66,16 @@
                     </div>
 
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;"  placeholder="Email" required type="text" name="text-1" id="signupEmail" value="">
+                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;"  placeholder="Email" required type="text" name="text-1" id="signupEmailiPad" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="UserName" type="text" name="text-1" id="signupUsername" value="">
+                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="UserName" type="text" name="text-1" id="signupUsernameiPad" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%;" class="ui-grid-a">
-                        <input type="password" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="text-1" id="signupPassword" value="">
+                        <input type="password" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="text-1" id="signupPasswordiPad" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <button  onclick="signUp()" id="btn-signUp" class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
+                        <button   id="btn-signUp" class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
                             <a style="display: inherit;text-decoration: none;color:white;font-family: goc;font-weight: bold;font-family: goc;font-size: bold;" href="" rel="external"  class="ui-link">Sign  up </a>
                         </button>
                     </div>
@@ -107,7 +107,7 @@
                 <input type="password" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="text-1" id="signupPassword" value="">
             </div>
             <div style="width: 86%;margin-left: 7%" class="ui-grid-a">
-                <button onclick="signUp()" id="btn-signUp" class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
+                <button  id="btn-signUpiPhone" class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
                     <a style="display: inherit;text-decoration: none;color:white;font-family: goc;font-weight: bold;font-family: goc;font-size: bold;" href="" rel="external"  class="ui-link">Sign  up </a>
                 </button>
             </div>
@@ -199,10 +199,22 @@
             }
         });
 
-        $("#btn-signUp").on("click", function () {
+        $("#btn-signUpiPhone").on("click", function () {
             $email = $("#signupEmail").val();
             $username = $("#signupUsername").val();
             $password = $("#signupPassword").val();
+
+            if($email === "" && $username === "" && $password === ""){
+                alert("All fields must be filled out");
+            }else{
+                window.location.href = '<?php echo base_url()?>/index.php/Welcome/signUp?email=' + $email + '&username=' + $username + '&password=' + $password;
+            }
+        });
+
+        $("#btn-signUp").on("click", function () {
+            $email = $("#signupEmailiPad").val();
+            $username = $("#signupUsernameiPad").val();
+            $password = $("#signupPasswordiPad").val();
 
             if($email === "" && $username === "" && $password === ""){
                 alert("All fields must be filled out");
