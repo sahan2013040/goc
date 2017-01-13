@@ -7,15 +7,7 @@
 </head>
 
 <body>
-<?php
-if($signUp){
-    echo "<script type='text/javascript'>alert('$signUp')</script>";
-}
-if($signIn){
-    echo "<script type='text/javascript'>alert('$signIn')</script>";
-}
 
-?>
 <div style="background: url(/goc/images/background_wood_panel.jpeg)" data-role="page" id="signIn-one">
     <div data-role="header">
         <img style="width:100%" src="/goc/images/logo_iPhone.png">
@@ -74,16 +66,16 @@ if($signIn){
                     </div>
 
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" id="emailiPad" placeholder="Email" required type="text" name="text-1" id="text-1" value="">
+                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;"  placeholder="Email" required type="text" name="text-1" id="signupEmail" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="UserName" type="text" name="text-1" id="text-1" value="">
+                        <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="UserName" type="text" name="text-1" id="signupUsername" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%;" class="ui-grid-a">
-                        <input type="password" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="text-1" id="text-1" value="">
+                        <input type="password" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="text-1" id="signupPassword" value="">
                     </div>
                     <div style="width: 66%;margin-left: 16%" class="ui-grid-a">
-                        <button  class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
+                        <button  onclick="signUp()" id="btn-signUp" class="input-mobile" style=" color: white; border: 3px solid;background-color: rgba(0, 0, 0, 0);" class="ui-btn">
                             <a style="display: inherit;text-decoration: none;color:white;font-family: goc;font-weight: bold;font-family: goc;font-size: bold;" href="" rel="external"  class="ui-link">Sign  up </a>
                         </button>
                     </div>

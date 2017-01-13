@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class userModel extends CI_Model {
+class UserModel extends CI_Model {
 
     public function __construct() {
         // Call the CI_Model constructor

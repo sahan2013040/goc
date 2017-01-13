@@ -34,7 +34,20 @@
           $("#contiune-Btn").on("click", function () {
               window.location.href = '<?php echo base_url()?>/index.php/Welcome/normalSignIn';
           });
-     });        
+     });
+
+      function scanQR() {
+          // JavaScript to send an action to your Objective-C code
+          var myAppName = 'myfakeappname';
+          var myActionType = 'myJavascriptActionType2';
+          var myActionParameters = {}; // put extra info into a dict if you need it
+
+          // (separating the actionType from parameters makes it easier to parse in ObjC.)
+          var jsonString = (JSON.stringify(myActionParameters));
+          var escapedJsonParameters = escape(jsonString);
+          var url = myAppName + '://' + myActionType + "#" + escapedJsonParameters;
+          document.location.href = url;
+      }
           
       </script>       
    </head>
@@ -72,28 +85,35 @@
         <div id="carouse-wrap" class="container-fluid visible-md hiden-xs">
           <ul id="carousel" class="carousel top_slider roundabout-holder" style="margin-top: 75px;">
             <li style="height:580px;width:408px">
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
+            <img src="/goc/images/treasure_hunt.jpg" alt="" class="slide" />
             </li>
             <li style="height:580px;width:408px">
               
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
+            <img src="/goc/images/meet_123.jpg" alt="" class="slide" />
               </li>
               <li style="height:580px;width:408px">
             
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
+            <img src="/goc/images/solve.jpg" alt="" class="slide" />
                 </li>
                 <li style="height:580px;width:408px">
              
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
+            <img src="/goc/images/favourites_got.jpg" alt="" class="slide" />
               </li >
                   <li style="height:580px;width:408px">
                
-          <img src="/goc/images/pub2.jpg" alt="" class="slide" />
+          <img src="/goc/images/fun.jpg" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/many_more.png" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/cheers.jpg" alt="" class="slide" />
               </li>
           </ul>
-          <button type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top: 145px;margin-left: 25%;
-            width: 50%;">
-              CONTINUE </button>    
+          <button id="contiune-Btn" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top: 145px;margin-left: 25%;
+            width: 50%;">continue</button>
         </div>
           
         <!-- iPhone-->
@@ -101,26 +121,39 @@
         <div id="carouse-wrap-iphone">
           <ul id="carousel" class="carousel top_slider roundabout-holder" style="margin-top: 75px;padding: 0px;position: relative;height: 
                                                                                  300px;width: 400px;">
-            <li style="height:500px;width:300px;">
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
-            </li>
-            <li style="height:500px;width:300px">              
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
-            </li>
-            <li style="height:500px;width:300px">            
-            <img src="/goc/images/pub2.jpg" alt="" class="slide"/>
-            </li>
-            <li style="height:500px;width:300px">             
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
-            </li>
-            <li style="height:500px;width:300px">               
-            <img src="/goc/images/pub2.jpg" alt="" class="slide" />
-            </li>
+              <li style="height:580px;width:408px">
+                  <img src="/goc/images/treasure_hunt.jpg" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/meet_123.jpg" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/solve.jpg" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/favourites_got.jpg" alt="" class="slide" />
+              </li >
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/fun.jpg" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/many_more.png" alt="" class="slide" />
+              </li>
+              <li style="height:580px;width:408px">
+
+                  <img src="/goc/images/cheers.jpg" alt="" class="slide" />
+              </li>
           </ul>
         </div>
-        <button id="contiune-Btn" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
+        <button id="contiune-Btn" onclick="scanQR()" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
             width: 50%;" >
-              CONTINUE </button>
+            continue
+               </button>
     </div>           
         <br> 
        </div>
