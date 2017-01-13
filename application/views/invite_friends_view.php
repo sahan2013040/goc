@@ -6,7 +6,7 @@
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="../css/style.css">
       <script src="../js/jquery-3.1.1.min.js"></script>
-      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
       <script src="../js/bootstrap.js"></script>
       <script type="application/javascript">
          $( document ).ready(function() {
@@ -28,51 +28,20 @@
              /*   $('#iphoneM').hide();
                  $('#iphoneList').hide();*/
             }
+
+            $('#invite').click(function () {
+               var count = 0;
+               $.each($("input[name='userCheck']:checked"), function(){
+                  count++;
+               });
+               loadMyView('<?php echo base_url() ?>index.php/Reservation?event='+'<?php echo $event ?>'+'&guests='+count );
+            });
+
            });
       </script>   
    </head>
    <body>
-      <img src="../images/logo_iPhone.png" width="100%" height="80%">
-      <div id="ipadM" class="menu opened container-fluid visible-md hiden-xs" style="margin-top: 30px">
-         <br>
-         <img src="../images/user.png" id="userImg" width="50%" height="30%">
-         <label class="username"> John Snow </label>
-         <ul>
-            <li>
-               <button class="btn btn-secondary btn-lg btn-block menubutton">
-                  <em id="ctBtnL" class="leftImage"> </em> Create  Treasure  Hunt
-                  <!-- <em id="ctBtnR" class='rightImage'></em> --> 
-               </button>
-            </li>
-            <li>
-               <button class="btn btn-secondary btn-lg btn-block menubutton">
-                  <em id="stBtnL" class="leftImage"> </em> Start  Treasure  Hunt <!-- <em class='rightImage'> -->
-               </button>
-            </li>
-            <li>
-               <button class="btn btn-secondary btn-lg btn-block menubutton">
-                  <em id="profileBtnL" class="leftImage"> </em> Profile <!-- <em class='rightImage'></em> --> 
-               </button>
-            </li>
-            <li>
-               <button class="btn btn-secondary btn-lg btn-block menubutton">
-                  <em id="helpBtnL" class="leftImage"> </em> Help <!-- <em class='rightImage'> --> 
-               </button>
-            </li>
-         </ul>
-      </div>
-      <div id="iphoneM" class="container-fluid visible-xs hiden-md">
-         <table width="90%" cellspacing="0" cellpadding="0" border="0" id="Table_01">
-            <tr>
-               <td><a href="#"><img width="60%" height="14.5%" alt="" src="../images/ct.png"/></a></td>
-               <td><a href="#"><img width="60%" height="15%" alt="" src="../images/st.png"/></a></td>
-               <td><a href="#"><img width="60%" height="15%" alt="" src="../images/person.png"/></a></td>
-               <td><a href="#"><img width="250%" height="65%" alt="" src="../images/help.png"/></a></td>
-            </tr>
-         </table>
-      </div>
-      <br> <br>
-      <div id="content" class="container-fluid col-md-8 col-md-push-4">
+         <p> <?php echo $event ?> </p>
          <div>
             <h2 class="title col-centered"> Invite Friends </h2>
          </div>
@@ -89,8 +58,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan Perera
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan Perera
                      </label>
                   </div>
                </div>
@@ -99,8 +68,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha Wijesekare
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha Wijesekare
                      </label>
                   </div>
                </div>
@@ -109,8 +78,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu Darshana
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu Darshana
                      </label>
                   </div>
                </div>
@@ -119,8 +88,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya Kobbekaduwa
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya Kobbekaduwa
                      </label>
                   </div>
                </div>
@@ -143,8 +112,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan
                      </label>
                   </div>
                </div>
@@ -153,8 +122,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha
                      </label>
                   </div>
                </div>
@@ -163,8 +132,8 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu
                      </label>
                   </div>
                </div>
@@ -173,19 +142,19 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input class="form-check-input" type="checkbox" value="">
-                     <img src="../images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya
                       </label>
                   </div>
                </div>
             </div>
            
          </div>
-           <div class="col-md-12">
+           <div id="invite" class="col-md-12">
                <button type="submit" class="btn btn-secondary btn-lg btn-block button">
                Invite </button>
             </div>
               </div>
          <br> <br>
-      </div>
+
    </body>

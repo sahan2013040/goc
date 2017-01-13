@@ -1,3 +1,11 @@
+<script type="application/javascript">
+    $(document).ready(function () {
+        $('#start').click(function () {
+            loadMyView('<?php echo base_url(); ?>index.php/huntController/solve');
+        });
+    });
+</script>
+
     <div class="container-fluid" align="center">
         <table cellspacing="0" cellpadding="0" border="0" class="text-center">
             <tr class="text-center">
@@ -47,13 +55,34 @@
 
     <div class="container-fluid pre-scrollable row" style="height: 150%">
         <?php
-        echo print_r($event);
+//        echo print_r($event);
 //            foreach ($event as $row) {
 //                echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>" .
 //                    "<img src='/goc/images/tick.png' width='50%' height='50%'>" .
 //                    "<p class='arialText'>Sahan Perera</p>" .
 //                    "</div>";
 //            }
+
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>" .
+            "<img src='/goc/images/tick.png' width='50%' height='50%'>" .
+            "<p class='arialText'>Sahan</p>" .
+            "</div>";
+
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>" .
+            "<img src='/goc/images/tick.png' width='50%' height='50%'>" .
+            "<p class='arialText'>Tharindu</p>" .
+            "</div>";
+
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>" .
+            "<img src='/goc/images/tick.png' width='50%' height='50%'>" .
+            "<p class='arialText'>Kaushalya</p>" .
+            "</div>";
+
+        echo "<div class='col-xs-4 col-md-4' style='height: 40px; margin-bottom: 15px'>" .
+            "<img src='/goc/images/tick.png' width='50%' height='50%'>" .
+            "<p class='arialText'>Natasha</p>" .
+            "</div>";
+
         ?>
     </div>
 
@@ -62,7 +91,7 @@
 <!--        Start  Event-->
 <!--    </button>-->
     <div class="col-md-12">
-        <button type="submit" class="btn btn-secondary btn-lg btn-block button"
+        <button id="start" type="submit" class="btn btn-secondary btn-lg btn-block button"
                 > Start Event
         </button>
     </div>

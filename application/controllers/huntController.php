@@ -28,4 +28,9 @@ class HuntController extends CI_Controller
 
     }
 
+    public function solve()
+    {
+        $this->load->view('solve_clues_view');
+    }
+
 }

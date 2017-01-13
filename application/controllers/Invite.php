@@ -26,7 +26,8 @@ class Invite extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('invite_friends_view');
+        $event = $this->input->get('event');
+		$this->load->view('invite_friends_view', array('event'=> $event));
 	}
 
 	public function menu()

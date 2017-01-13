@@ -19,6 +19,14 @@
          } else {
              console.log("another device");
          }
+
+         $('#name').val('<?php echo $event ?>');
+         $('#guests').val('<?php echo $guests ?>');
+
+//         $('#ok').click(function () {
+//            loadMyView('<?php //echo base_url(); ?>//index.php/Welcome/home');
+//         });
+
         });
       </script>   
    </head>
@@ -73,7 +81,7 @@
                       <div id="pubInfo" style="color: black; font-size:14;">
                          In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever                            since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world                             
                          </div> 
-                      <button type="submit"> OK </button>
+                      <button id="ok" type="submit"> OK </button>
                   </div>                
                 </div>
               </div>

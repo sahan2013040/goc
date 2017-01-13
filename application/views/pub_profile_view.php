@@ -5,7 +5,7 @@
       <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
       <script src="/goc/js/jquery-3.1.1.min.js"></script>
-<!--      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>-->
+      <script src="/goc/js/myFunctions.js"></script>
       <script src="/goc/js/bootstrap.js"></script>
       <script type="application/javascript">
       $( document ).ready(function() {
@@ -18,6 +18,13 @@
          } else {
              console.log("another device");
          }
+
+         $('#inviteBtn').click(function () {
+             $('body').removeClass('modal-open');
+             $('.modal-backdrop').remove();
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventname').val());
+         });
+
         });
       </script> 
       <style type="text/css">
@@ -128,7 +135,7 @@
                         
                         <div class= "row">  
                           <div class="col-xs-6">
-                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid 
+                            <button id="inviteBtn" type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid
                               black; height:40px;">Invite</button>
                            </div>
                           <div class="col-xs-6">
