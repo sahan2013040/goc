@@ -48,7 +48,7 @@ class User extends CI_Model {
                'imgurl' => $data
             );
 
-        $this->db->where('user_id', 'user001');
+        $this->db->where('user_id', '1');
         $this->db->update('users', $data);
     }
     

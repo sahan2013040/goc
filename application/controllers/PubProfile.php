@@ -8,6 +8,7 @@ class PubProfile extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->database();
+        $this->load->model('pubModel');
     }
 
     /**
@@ -41,5 +42,11 @@ class PubProfile extends CI_Controller {
 		$this->load->view('pub_profile_view', $data);
 	}
 
+	public function updateFavourites(){
+        $pub_id = $this->input->get('id');
+        $status = $this->input->get('status');
+
+        $this->pubModel->addFavourites($pub_id, $status);
+    }
 	
 }
