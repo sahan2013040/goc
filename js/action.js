@@ -16,13 +16,16 @@ $(document).ready(function() {
         console.log(pubs);
          $.ajax({
               type: 'POST',
-              url: 'http://localhost:8888/goc/index.php/menuController/email',
+              url: '/goc/index.php/menuController/email',
               data: { result : favorite,
                         pubs: pubs
                     }             
         }); 
         
-        location.reload();
+        //location.reload();
+          $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();     
+        loadMyView('/goc/index.php/menuController/profile');
     });   
     
     
@@ -34,11 +37,14 @@ $(document).ready(function() {
             });        
          $.ajax({
               type: 'POST',
-              url: 'http://localhost:8888/goc/index.php/menuController/email',
+              url: '/goc/index.php/menuController/email',
               data: { result : favorite }             
         }); 
         
-        location.reload();
+       // location.reload();
+          $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();     
+         loadMyView('/goc/index.php/menuController/profile');
     });
     
      $("#piemenu").click(function(){
@@ -46,7 +52,7 @@ $(document).ready(function() {
        var image =  $("image[class|=wheelnav-piemenu-title-selected]").attr("href");
        $.ajax({
               type: 'POST',
-              url: 'http://localhost:8888/goc/index.php/menuController/updateCharacter',
+              url: '/goc/index.php/menuController/updateCharacter',
               data: { imgurl : image}             
         }); 
     });       
