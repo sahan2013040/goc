@@ -25,6 +25,44 @@
              loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventname').val());
          });
 
+          if(<?php echo $pub->favourite; ?>){
+              $('#favourite_Btn').attr("src", "/goc/images/favourite.png");
+              
+          }
+          else{
+              $('#favourite_Btn').attr("src", "/goc/images/favourite.png");
+
+          }
+
+          $('#favourite_Btn').click(function () {
+              if(<?php echo $pub->favourite; ?>){
+                  $('#favourite_Btn').attr("src", "/goc/images/favourite.png");
+                  updateFav(<?php echo $pub->id; ?>,false);
+              }
+              else{
+                  $('#favourite_Btn').attr("src", "/goc/images/favourite.png");
+                  updateFav(<?php echo $pub->id; ?>,true);
+              }
+          });
+
+          function updateFav($id,$status){
+              $.ajax({
+                  url: base_url()+"/index.php/PubProfile/updateFavourites",
+                  type: "get", //send it through get method
+                  data: {
+                      id:$id ,
+                      status: $status
+                  },
+                  success: function(response) {
+                      //Do Something
+
+                  },
+                  error: function(xhr) {
+                      //Do Something to handle error
+                  }
+              });
+          }
+
         });
       </script> 
       <style type="text/css">
@@ -109,8 +147,8 @@
                 <div class="col-xs-9">
                   <h2 class="title"> <?php echo $pub->name; ?> </h2> </div>
                 <div class="col-xs-3">
-                    <img src="/goc/images/favourite.png" width="100%" height="100%"
-                  class="img-responsive">
+                    <input id="favourite_Btn" type="image" src="/goc/images/favourite.png" width="100%" height="100%">
+
                 </div>
               </div>
            </div>          
