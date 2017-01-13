@@ -34,9 +34,9 @@ class MenuController extends CI_Controller
 
     public function profile()
     {
-        $this->load->model('user');
-        $data["users"] = $this->user->get_user_info();
-        $data["pubs"] =  $this->user->get_fav_pub_info();      
+        $this->load->model('User');
+        $data["users"] = $this->User->get_user_info();
+        $data["pubs"] =  $this->User->get_fav_pub_info();
 		$this->load->view('profile_view', $data);
     }
 
@@ -90,9 +90,9 @@ class MenuController extends CI_Controller
     
     public function updateCharacter()
     {
-        $this->load->model('user');
+        $this->load->model('User');
         $img = $this->input->post('imgurl');
-        $update = $this->user->updateCharacter($img);
+        $update = $this->User->updateCharacter($img);
     }
     
      public function newsletter()

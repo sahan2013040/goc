@@ -1,4 +1,6 @@
-$(document).ready(function() {    
+$(document).ready(function() {
+
+
     
     $("#emailFavBtn").click(function(){
          
@@ -14,7 +16,7 @@ $(document).ready(function() {
         console.log(pubs);
          $.ajax({
               type: 'POST',
-              url: 'http://localhost:8080/goc/index.php/menuController/email',
+              url: 'http://localhost:8888/goc/index.php/menuController/email',
               data: { result : favorite,
                         pubs: pubs
                     }             
@@ -32,7 +34,7 @@ $(document).ready(function() {
             });        
          $.ajax({
               type: 'POST',
-              url: 'http://localhost:8080/goc/index.php/menuController/email',
+              url: 'http://localhost:8888/goc/index.php/menuController/email',
               data: { result : favorite }             
         }); 
         
@@ -44,7 +46,7 @@ $(document).ready(function() {
        var image =  $("image[class|=wheelnav-piemenu-title-selected]").attr("href");
        $.ajax({
               type: 'POST',
-              url: 'http://localhost:8080/goc/index.php/menuController/updateCharacter',
+              url: 'http://localhost:8888/goc/index.php/menuController/updateCharacter',
               data: { imgurl : image}             
         }); 
     });   

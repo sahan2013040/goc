@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
         }
         else if($this->userModel->signIn($username, $password) === true){
             $postData["signIn"] = 'Signed in successfully';
-            $this->load->view('signIn',$postData);
+            $this->load->view('template');
         }
     }
 

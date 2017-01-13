@@ -13,13 +13,13 @@ class User extends CI_Model {
     
     public function insertUser($data) {
 
-        return $this->db->insert('user', $data);
+        return $this->db->insert('users', $data);
     }
 
     public function get_user_info() {
       
         $this->db->select("*");
-        $this->db->from('user');
+        $this->db->from('users');
        $query = $this->db->get();
         if ($query->num_rows() > 0) {
             foreach ($query->result() as $row) {
@@ -49,7 +49,7 @@ class User extends CI_Model {
             );
 
         $this->db->where('user_id', 'user001');
-        $this->db->update('user', $data); 
+        $this->db->update('users', $data);
     }
     
 }

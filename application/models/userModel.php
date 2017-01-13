@@ -21,7 +21,7 @@ class userModel extends CI_Model {
             return false;
         }
         else{
-            $data = array('username' => $username, 'password' => $password, 'email' => $email);
+            $data = array('name' => $username, 'password' => $password, 'email' => $email);
             $this->db->insert('users', $data);
         }
 
@@ -29,7 +29,7 @@ class userModel extends CI_Model {
 
     public function signIn($username, $password)
     {
-        $query = $this->db->query("SELECT * FROM users where username='".$username."' AND password ='".$password."'");
+        $query = $this->db->query("SELECT * FROM users where name='".$username."' AND password ='".$password."'");
         if ($query->num_rows() > 0) {
             return true;
         }

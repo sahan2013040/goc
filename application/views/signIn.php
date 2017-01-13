@@ -43,11 +43,11 @@ if($signIn){
                     </div>
                     <div class="ui-grid-b"><!--sign up grid -->
                         <div style="width: 66%;margin-left: 16%;border:none;" class="ui-grid-a input-div">
-                            <input id="usernameiPad" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px; " placeholder="UserName" type="text" name="username" id="connectUsername" value="" required >
+                            <input class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px;font-family: goc;font-size: 14px; " placeholder="UserName" type="text" name="username" id="connectUsername" value="" required >
                         </div>
 
                         <div style="width: 66%;margin-left:16%;" class="ui-grid-a input-div">
-                            <input type="password" id="passwordiPad" class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px; font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="password" id="connectPassword" value="" required >
+                            <input type="password"  class="input-mobile" style="background-color:#301105; border-color:#301105; padding-left:30px; font-family: goc;font-size: 14px;" placeholder="Password" type="text" name="password" id="connectPassword" value="" required >
                         </div>
 
                         <div style="width: 66%;margin-left: 16%;" class="ui-grid-a input-div">

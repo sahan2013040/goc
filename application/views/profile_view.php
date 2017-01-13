@@ -24,7 +24,7 @@
 			vertical-align: middle;
 			}
 		</style>
-		<script src="/goc/js/jquery-1.9.js"></script>
+		<script src="/goc/js/jquery-3.1.1.min.js"></script>
 		<script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="/goc/js/bootstrap.js"></script>
 		<script type="text/javascript" src="/goc/js/raphael.min.js"></script>

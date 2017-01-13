@@ -5,7 +5,7 @@
       <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
       <script src="/goc/js/jquery-3.1.1.min.js"></script>
-      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
+<!--      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>-->
       <script src="/goc/js/bootstrap.js"></script>
       <script type="application/javascript">
       $( document ).ready(function() {
