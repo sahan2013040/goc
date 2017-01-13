@@ -3,11 +3,11 @@
    <head>
       <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
-      <script src="../js/jquery-3.1.1.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+      <script src="/goc/js/jquery-3.1.1.min.js"></script>
       <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
-      <script src="../js/bootstrap.js"></script>
+      <script src="/goc/js/bootstrap.js"></script>
       <script type="application/javascript">
          $( document ).ready(function() {
             var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -31,10 +31,24 @@
 
             $('#invite').click(function () {
                var count = 0;
+               var invitees = [];
                $.each($("input[name='userCheck']:checked"), function(){
                   count++;
+                  invitees.push($(this).val());
                });
-               loadMyView('<?php echo base_url() ?>index.php/Reservation?event='+'<?php echo $event ?>'+'&guests='+count );
+               var invite = JSON.stringify(invitees);
+               loadMyView('<?php echo base_url() ?>index.php/Reservation?event='+'<?php echo $event ?>'+'&guests='+count+'&invitees='+invite+'&venue='+'<?php echo $venue; ?>');
+            });
+
+             $('#inviteiPad').click(function () {
+               var count = 0;
+               var invitees = [];
+               $.each($("input[name='userCheck']:checked"), function(){
+                  count++;
+                  invitees.push($(this).val());
+               });
+               var invite = JSON.stringify(invitees);
+              loadMyView('<?php echo base_url() ?>index.php/Reservation?event='+'<?php echo $event ?>'+'&guests='+count+'&invitees='+invite+'&venue='+'<?php echo $venue ?>');
             });
 
            });
@@ -58,7 +72,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="sahan88@gmail.com_1">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan Perera
                      </label>
                   </div>
@@ -68,7 +82,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="nwijesekare@gmail.com_3">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha Wijesekare
                      </label>
                   </div>
@@ -78,7 +92,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="darshana20124@live.com_2">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu Darshana
                      </label>
                   </div>
@@ -88,14 +102,14 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="kaushkobbekaduwa@gmail.com_4">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya Kobbekaduwa
                      </label>
                   </div>
                </div>
             </div>
             <div class="col-md-12">
-               <button type="submit" class="btn btn-secondary btn-lg btn-block button">
+               <button id="inviteiPad" type="submit" class="btn btn-secondary btn-lg btn-block button">
                Invite </button>
             </div>
          </div>
@@ -112,7 +126,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="sahan88@gmail.com_1">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Sahan
                      </label>
                   </div>
@@ -122,7 +136,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="nwijesekare@gmail.com_3">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Natasha
                      </label>
                   </div>
@@ -132,7 +146,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="darshana20124@live.com_2">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Tharindu
                      </label>
                   </div>
@@ -142,7 +156,7 @@
                <div class="col-md-12">
                   <div class="form-check">
                      <label class="form-check-label">
-                     <input name='userCheck' class="form-check-input" type="checkbox" value="">
+                     <input name='userCheck' class="form-check-input" type="checkbox" value="kaushkobbekaduwa@gmail.com_4">
                      <img src="/goc/images/user.png" style="width: 15%;height: 15%;padding-right: 2%;padding-left: 2%;"> Kaushalya
                       </label>
                   </div>

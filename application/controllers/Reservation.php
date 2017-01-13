@@ -4,9 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Reservation extends CI_Controller {
 
     function __construct()
-    {
+    {   
         parent::__construct();
         $this->load->helper('url');
+        include 'ChromePhp.php';
+
     }
     
     /**
@@ -28,13 +30,27 @@ class Reservation extends CI_Controller {
 	{
         $event = $this->input->get('event');
         $guests = $this->input->get('guests');
-		$this->load->view('reservation_view', array('event'=>$event, 'guests'=>$guests));
+        $invitees = $this->input->get('invitees');
+        $venue = $this->input->get('venue');        
+		$this->load->view('reservation_view', array('event'=>$event, 'guests'=>$guests, 'invitees' => $invitees, 'venue' => $venue));
 	}
 
 	public function menu()
 	{
 		$this->load->view('iphone_menu');
 	}
-	
-
+    
+    public function addevent()
+    {
+      $invitees = $this->input->post('invitees');
+   
+      $eventobject = array(
+        'name' => $this->input->post('eventname'),  
+        'venue' =>  $this->input->post('venue'),
+        'dateTime' => $this->input->post('dateD') . ' '. $this->input->post('timeT')
+        );
+        $this->load->model('eventModel');
+        $this->eventModel->insertEvent($eventobject);
+    }
+    
 }

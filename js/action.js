@@ -49,7 +49,6 @@ $(document).ready(function() {
               url: 'http://localhost:8888/goc/index.php/menuController/updateCharacter',
               data: { imgurl : image}             
         }); 
-    });   
-    
-      
+    });       
+   
 });

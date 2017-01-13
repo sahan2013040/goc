@@ -21,8 +21,16 @@
 
          $('#inviteBtn').click(function () {
              $('body').removeClass('modal-open');
+             $('.modal-backdrop').remove();             
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventname').val()+'&venue='+'<?php echo $pub->id; ?>');
+         });
+
+          $('#inviteBtniPad').click(function () {
+             $('body').removeClass('modal-open');
              $('.modal-backdrop').remove();
-             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventname').val());
+             /* var venue=<?php echo $pub->name; ?>;
+              console.log(venue);*/
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventnameiPad').val()+'&venue='+'<?php echo $pub->id; ?>');
          });
 
           if(<?php echo $pub->favourite; ?>){
@@ -198,14 +206,14 @@
                         <h2 class="title col-centered" style="text-align:center; "> CREATE   EVENT</h2>
                         <br>
                         <div class="form-group col-md-8" >                         
-                          <input type="text" class="form-control" id="eventname" placeholder="ENTER EVENT NAME"
+                          <input type="text" class="form-control" id="eventnameiPad" placeholder="ENTER EVENT NAME"
                                  style="margin-left:25%; margin-top:25%;">
                         </div>
                         
                         <div class= "row">  
                           <div class="col-xs-6" style="margin-top:10%; margin-left:10%;">
-                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid 
-                              black; width:75%;">Email</button>
+                            <button type="button" id="inviteBtniPad" class="btn btn-default btn-lg btn-block buttonEmailFav" style="border: 3px solid 
+                              black; width:75%;">Invite</button>
                            </div>
                           <div class="col-xs-6" style="margin-left:50%;">
                             <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 

@@ -3,11 +3,11 @@
    <head>
       <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
-      <script src="../js/jquery-3.1.1.min.js"></script>
-      <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-      <script src="../js/bootstrap.js"></script>
+      <link rel="stylesheet" type="text/css" href="/goc/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="/goc/css/style.css">
+      <script src="/goc/js/jquery-3.1.1.min.js"></script>
+      <script src="/goc/js/jquery.mobile-1.4.5.min.js"></script>
+      <script src="/goc/js/bootstrap.js"></script>
       <script type="application/javascript">
       $( document ).ready(function() {
          var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -22,10 +22,33 @@
 
          $('#name').val('<?php echo $event ?>');
          $('#guests').val('<?php echo $guests ?>');
+          console.log('list:'+'<?php echo $invitees ?>');
+          
+         $('#reserveBtn').click(function () {
+           
+         var eventName = $("#name").val();
+         var telNo = $("#telNo").val();
+         var guests = $("#guests").val();
+         var date = $("#dateD").val();
+         var time = $("#timeT").val();
+         var venue=<?php echo $venue ?>;
+         var invitees= <?php echo $invitees ?>;
+            
+          $.ajax({
+              type: 'POST',
+              url: '/goc/index.php/Reservation/addevent',
+              data: { eventname : eventName,
+                      telno: telNo,
+                      guests:guests,
+                      dateD:date,
+                      timeT:time,
+                      invitees:invitees,
+                     venue:venue
+                    }             
+            }); 
 
-//         $('#ok').click(function () {
-//            loadMyView('<?php //echo base_url(); ?>//index.php/Welcome/home');
-//         });
+         });         
+
 
         });
       </script>   
@@ -35,7 +58,7 @@
       
          <div>
                <h2 class="title col-centered"> Reservation </h2>
-         </div>
+        </div>
          <br>
          <div class="form-group row">
             <div class="col-md-12">
@@ -57,19 +80,19 @@
          </div>
          <div class="form-group row">
             <div class="col-md-12">
-               <input  class="form-control input"  type="text" name="date" id="date" placeholder="DATE" onfocus="(this.type='date')"
+               <input  class="form-control input"  type="text" name="date" id="dateD" placeholder="DATE" onfocus="(this.type='date')"
                   required>  
             </div>
          </div>
          <div class="form-group row">
             <div class="col-md-12">
-               <input  class="form-control input"  type="text" name="time" id="time" placeholder="TIME" onfocus="(this.type='time')"
+               <input  class="form-control input"  type="text" name="time" id="timeT" placeholder="TIME" onfocus="(this.type='time')"
                   required>
             </div>
          </div>
          <br> <br>
          <div class="col-md-12">
-            <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" data-target="#myModal">
+            <button id="reserveBtn" type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" data-target="#myModal">
             Confirm </button>
             <br>            
             <div id="myModal" class="modal fade" role="dialog">
