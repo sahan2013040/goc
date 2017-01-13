@@ -31,23 +31,16 @@
 
       }(jQuery));
 
+          $("#contiune-Btn1").on("click", function () {
+              window.location.href = '<?php echo base_url()?>/index.php/Welcome/normalSignIn';
+          });
+
           $("#contiune-Btn").on("click", function () {
               window.location.href = '<?php echo base_url()?>/index.php/Welcome/normalSignIn';
           });
      });
 
-      function scanQR() {
-          // JavaScript to send an action to your Objective-C code
-          var myAppName = 'myfakeappname';
-          var myActionType = 'myJavascriptActionType2';
-          var myActionParameters = {}; // put extra info into a dict if you need it
 
-          // (separating the actionType from parameters makes it easier to parse in ObjC.)
-          var jsonString = (JSON.stringify(myActionParameters));
-          var escapedJsonParameters = escape(jsonString);
-          var url = myAppName + '://' + myActionType + "#" + escapedJsonParameters;
-          document.location.href = url;
-      }
           
       </script>       
    </head>
@@ -119,7 +112,7 @@
         <!-- iPhone-->
         <div class="row container-fluid visible-xs hiden-md" style="overflow:hidden;">
         <div id="carouse-wrap-iphone">
-          <ul id="carousel" class="carousel top_slider roundabout-holder" style="margin-top: 75px;padding: 0px;position: relative;height: 
+          <ul id="carousel" class="carousel top_slider roundabout-holder" style="margin-top: 75px;padding: 0px;position: relative;height:
                                                                                  300px;width: 400px;">
               <li style="height:580px;width:408px">
                   <img src="/goc/images/treasure_hunt.jpg" alt="" class="slide" />
@@ -150,7 +143,7 @@
               </li>
           </ul>
         </div>
-        <button id="contiune-Btn" onclick="scanQR()" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
+        <button id="contiune-Btn1" type="submit" class="btn btn-secondary btn-lg btn-block button" style="display: block;margin-top:110px;margin-left: 25%;
             width: 50%;" >
             continue
                </button>

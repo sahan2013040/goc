@@ -8,8 +8,6 @@
     
 <?php $this->view('template'); ?>
 
-<div class="container-fluid col-md-8 col-md-push-4" style="margin-top: 20px">
-
     <div class="row title">Total Points Collected</div>
 
     <div class="row container-fluid" style="display: inline" align="center">
@@ -73,7 +71,7 @@
     data-amount="2000"
     data-name="Demo Site"
     data-description="2 widgets ($20.00)"
-    data-image="/128x128.png">
+    data-image="/goc/images/logo.png">
   </script>
 </form>
 
