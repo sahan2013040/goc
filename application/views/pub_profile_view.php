@@ -101,14 +101,16 @@
               <div class="row">
                 <div class="col-xs-9">
                   <h2 class="title"> <?php echo $pub->name; ?> </h2> </div>
-                <div class="col-xs-3"><img src="/goc/images/favourite.png" width="100%" height="100%"
-                  class="img-responsive"></div>
+                <div class="col-xs-3">
+                    <img src="/goc/images/favourite.png" width="100%" height="100%"
+                  class="img-responsive">
+                </div>
               </div>
            </div>          
         </div>
           <br>
          <div id="pubInfo" style="color: white;"> <?php echo $pub->description; ?> </div>
-       </div>
+
      <div class="container-fluid visible-xs hiden-md">
         <button type="submit" class="btn btn-secondary btn-lg btn-block button" data-toggle="modal" href="#createEvent">
               CREATE EVENT 
