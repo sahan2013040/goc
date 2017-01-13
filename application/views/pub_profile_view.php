@@ -52,10 +52,10 @@
    </head>
    <body>
          <div class="container-fluid visible-md hiden-xs">   
-           <div style="padding-top:5%;">              
+           <div style="padding-top:2%;">              
               <div class="row">
                 <div class="col-md-9">
-                  <h2 class="title"> PUB NAME </h2> </div>
+                  <h2 class="title"><?php echo $pub->name; ?></h2> </div>
                 <div class="col-md-3"><img src="/goc/images/favourite.png" width="50%" height="50%"
                   class="img-responsive" ></div>
               </div>
@@ -148,8 +148,8 @@
             </div>
         </div>
 
-    
-    <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-4">
+    </div>
+    <div class="container-fluid visible-md hiden-xs col-md-8 col-md-push-2">
      <button type="submit" class="btn btn-secondary btn-lg btn-block button " data-toggle="modal" href="#createEventiPad">
               CREATE EVENT 
           </button>
