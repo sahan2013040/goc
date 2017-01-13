@@ -1,6 +1,13 @@
 <script type="application/javascript">
     $(document).ready(function () {
         $('#start').click(function () {
+//            loadMyView('<?php //echo base_url(); ?>//index.php/huntController/solve');
+            $('#myModal').modal('toggle');
+        });
+
+        $('#dismiss-Btn').click(function () {
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
             loadMyView('<?php echo base_url(); ?>index.php/huntController/solve');
         });
     });
@@ -53,7 +60,7 @@
         <p class="title">Invitees</p>
     </div>
 
-    <div class="container-fluid pre-scrollable row" style="height: 150%">
+    <div class="container-fluid pre-scrollable row" style="height: 30%">
         <?php
 //        echo print_r($event);
 //            foreach ($event as $row) {
@@ -95,3 +102,22 @@
                 > Start Event
         </button>
     </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color:transparent;">
+            <div class="modal-body">
+                <br><br>
+                <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">welcome   to   goc!</h2>
+                <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">you   are   right   on   time</h2>
+<!--                <p id="poiText" style="text-align: center; color:white;">welcome   to   goc!   you   are   right   on   time</p>-->
+                <!--<div class= "row">-->
+                <div class="col-centered" style="margin-bottom:2%; margin-left:10%; padding-left: 90px;">
+                    <button type="button" id="dismiss-Btn" class="btn btn-default btn-lg btn-block buttonEmailFav" data-dismiss="modal" style="border: 1px solid
+                              black; width:50%; height:30px; margin-bottom:10px">Ok</button>
+                </div>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

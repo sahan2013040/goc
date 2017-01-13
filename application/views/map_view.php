@@ -118,7 +118,7 @@
                             console.log(repubMarker.title);
                             if (repubMarker.title === "THE RE.PUB.LK" || repubMarker.title === "Loft Lounge" || repubMarker.title === "Flamingo House" || repubMarker.title === "&Co") {
 //                                infowindow.open(map, repubMarker);
-                                $('#content').load('<?php echo base_url() ?>index.php/PubProfile?id='+repubMarker.id);
+                                $('#content').load('<?php echo base_url() ?>index.php/PubProfile?pub_id='+repubMarker.id);
                             }
                             else {
                                 $('#myModal').modal('toggle');

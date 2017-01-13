@@ -7,8 +7,8 @@ class PubProfile extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->database();
         $this->load->model('pubModel');
+        $this->load->database();
     }
 
     /**
@@ -28,9 +28,9 @@ class PubProfile extends CI_Controller {
 	 */
 	public function index()
 	{
-        $id = $this->input->get('id');
+        $id = $this->input->get('pub_id');
 
-        $query = $this->db->query("SELECT * FROM pubs WHERE id=$id");
+        $query = $this->db->query("SELECT * FROM pubs WHERE pub_id=$id");
 
         $d1 = [];
         if ($query->num_rows() > 0) {
@@ -43,10 +43,14 @@ class PubProfile extends CI_Controller {
 	}
 
 	public function updateFavourites(){
-        $pub_id = $this->input->get('id');
-        $status = $this->input->get('status');
+        $pub_id = $this->input->get('pub_id');
 
-        $this->pubModel->addFavourites($pub_id, $status);
+
+//        echo $pub_id." ".$status;
+//        $value =  array('status' => $status );
+//        echo json_encode($value);
+
+        echo $this->pubModel->addFavourites($pub_id);
     }
 	
 }
