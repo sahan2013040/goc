@@ -13,10 +13,10 @@
     </head>
     <body>
 
-        <div id="iphoneMap" class="container-fluid visible-xs hiden-md">
-            
-        </div>
-        
+        <div id="iphoneMap" class="container-fluid visible-xs hiden-md"></div>
+
+        <div id="ipadMap" class="container-fluid visible-md hiden-xs"></div>
+
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color:transparent;">                 
@@ -35,7 +35,6 @@
                 </div>
             </div>
         </div>
-        
         
         
         <script>
