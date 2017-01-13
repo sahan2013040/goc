@@ -14,14 +14,33 @@ class pubModel extends CI_Model {
         $this->load->database();
     }
 
-    public function addFavourites($pub_id, $status){
-        $data = array(
-            'favourite' => $status
+    public function addFavourites($pub_id){
+//        $data = array(
+//            'id' => $pub_id,
+//            'favourite' => $status
+//        );
+//        $this->db->set();
+//        $this->db->where('id', $pub_id);
+//        $this->db->set('favourite', $status);
+//        $this->db->update('pubs');
+//        return $pub_id." ".$status;
 
-        );
 
-        $this->db->where('id', $pub_id);
-        $this->db->update('pubs', $data);
+        $query = $this->db->query("SELECT * FROM pubs where pub_id='".$pub_id."'");
+
+        $row = $query->row_array();
+        $fav = $row['favourite'];
+        if($fav == 1){
+            $data=array('favourite'=>0);
+            $this->db->where('pub_id',$pub_id);
+            $this->db->update('pubs',$data);
+        }
+        else{
+            $data=array('favourite'=>1);
+            $this->db->where('pub_id',$pub_id);
+            $this->db->update('pubs',$data);
+        }
+
 
     }
 
