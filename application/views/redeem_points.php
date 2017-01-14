@@ -2,18 +2,46 @@
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="application/javascript" src="/goc/js/myFunctions.js"></script>
+    <script type="application/javascript">
+
+        $(document).ready(function () {
+            var ptoredeem = 0;
+
+            $('#left').click(function () {
+                if(ptoredeem > 0){
+                    ptoredeem -= 10;
+                    $('#red_points').val(ptoredeem);
+                    reducedBill(ptoredeem);
+                }
+            });
+
+            $('#right').click(function () {
+                if( <?php echo $points; ?> > ptoredeem ){
+                    ptoredeem += 10;
+                    $('#red_points').val(ptoredeem);
+                    reducedBill(ptoredeem);
+                }
+            });
+
+            var awasanaBIllEka = 0;
+            function reducedBill(points) {
+                awasanaBIllEka = <?php echo $points; ?> - points/10;
+                $('#toBePaid').text(awasanaBIllEka);
+            }
+        });
+
+    </script>
     
 </head>
 <body>
-    
-<?php $this->view('template'); ?>
 
     <div class="row title">Total Points Collected</div>
 
     <div class="row container-fluid" style="display: inline" align="center">
         <img class="img-circle col-md-4 col-xs-4 col-xs-push-0" src="../../images/crown.png" width="10%" height="10%"
              style="max-height: 20%; max-width: 20%;">
-        <p class="goldenText col-md-4 col-xs-4 col-xs-push-1" style="margin-top: 10px; "> 10,000 </p>
+        <p class="goldenText col-md-4 col-xs-4 col-xs-push-1" style="margin-top: 10px; "> <?php echo $points; ?>  </p>
         <img class="img-circle col-md-4 col-xs-4 col-xs-push-3" src="../../images/crown.png" width="10%" height="10%"
              style="max-height: 20%; max-width: 20%;">
     </div>
@@ -21,13 +49,13 @@
     <div class="row title">Points to redeem</div>
     <table class="table form-group" style="background-color: white" align="center">
         <tr align="deadCenter">
-            <td class="col-xs-4" align="center"><input type="image" src="../../images/prevarrow.png" width="50%"
+            <td class="col-xs-4" align="center"><input id="left" type="image" src="../../images/prevarrow.png" width="50%"
                                                        height="10%"></td>
             <td class="col-xs-4 col-xs-push-1 " align="center"><input id='red_points'
                                                                       type="number"
-                                                                      class="form-control col-sx-4 goldenText" min="0">
+                                                                      class="form-control col-sx-4 goldenText" min="0" style="height: 65px;">
             </td>
-            <td class="col-xs-4 col-xs-push-3 " align="center"><input type="image"
+            <td class="col-xs-4 col-xs-push-3 " align="center"><input id="right" type="image"
                                                                       src="../../images/nextarrow.png"
                                                                       width="50%" height="10%"></td>
         </tr>
@@ -35,7 +63,7 @@
 
 <!--    Some points to money conversion rate-->
     <div class="row container-fluid" style="display: inline" align="center">
-        <img class="img-circle col-md-2 col-xs-2 col-xs-push-1" src="../../images/info.png" width="40%" height="40%"
+        <img class="img-circle col-md-2 col-xs-2 col-xs-push-1" src="../../images/info.png" width="80px" height="49px"
              style="max-height: 40%; max-width: 40%;">
         <p class="col-md-8 col-xs-8 col-xs-push-1" style="color: white; font-size: 120%; margin-top: 5px"> 10 Points
             convert to $1 </p>
@@ -45,10 +73,10 @@
 <!--    Shows amount to be paid after redeeming points-->
     <div class="row title">Payable after redeem</div>
     <div class="row container-fluid" style="display: inline" align="center">
-        <img class="img-circle col-md-2 col-xs-2 col-xs-push-4" src="../../images/gold%20coin.png" width="40%"
-             height="40%"
+        <img class="img-circle col-md-2 col-xs-2 col-xs-push-4" src="../../images/gold%20coin.png" width="80px"
+             height="49px"
              style="max-height: 40%; max-width: 40%;">
-        <p class="col-md-8 col-xs-8 col-xs-push-1" style="color: white; font-size: 200%; "> 200 </p>
+        <p id="toBePaid" class="col-md-8 col-xs-8 col-xs-push-1" style="color: white; font-size: 200%; ">  </p>
     </div>
 
 <!--    Pay Button-->
@@ -68,9 +96,9 @@
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_vS6AtWJ469hmCGFWBxGRag1f"
-    data-amount="2000"
-    data-name="Demo Site"
-    data-description="2 widgets ($20.00)"
+    data-amount={{awasanaBIllEka}}
+    data-name="Games of Cheers"
+    data-description="Total Bill"
     data-image="/goc/images/logo.png">
   </script>
 </form>

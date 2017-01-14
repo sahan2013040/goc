@@ -64,6 +64,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                  }
                                  
                                 function onScan(qrcode){
+                                    var myvar = getURLParameter('username');
+                                    console.log(myvar);
+                                    addPoints(myvar);
                                     if (isiPad) {
 			                 console.log("ipad ");
                                          if(qrcode === 1){
@@ -102,11 +105,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     }
 			             }                                   
                                 }
+
+                    function addPoints($username){
+                        $.ajax({
+                            url: "<?php echo base_url(); ?>index.php/Welcome/addPointsToUser",
+                            type: "get", //send it through get method
+                            data: {
+                                username: $username,
+                                points: 5
+
+                            },
+                            success: function (rsponse) {
+
+                            },
+                            error: function (xhr) {
+//                      console.log('ok');
+                            }
+                        });
+                    }
+
+                    function getURLParameter(name) {
+                        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+                    }
+
+                    $('#endEvent-Btn').click(function () {
+                        var myvar = getURLParameter('username');
+                        loadMyView('<?php echo base_url(); ?>index.php/Billing');
+//                        loadMyView('<?php //echo base_url(); ?>//index.php/pay/redeem?user='+myvar);
+
+                    });
 		</script>   
 	</head>
 	<body>
 		
-		<div id="content" class="container-fluid col-md-8 col-md-push-4">
+		<div>
 			<div>
 				<h2 class="title col-centered"> Pub Crawl </h2>
 			</div>
@@ -183,7 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div id="iphoneClues" class="container-fluid visible-xs hiden-md" style="background: rgba(0, 0, 0, 0.50);width: 95%;height: 250px;margin-left: 2%;">
 				<div class="carousel slide wizard" data-ride="carousel" data-interval="false" style="height: 250px;">
 					 <!--Indicators--> 
-					<ul id="status" class="carousel-indicators" style="left: 20%;top: 20%;">
+					<ul id="status" class="carousel-indicators" style="left: 20%;top: 45px;">
 						<li id="1" data-target=".wizard" data-slide-to="0" class="active" style="margin-left: -5px;">
 							<p style="
 								text-indent: 0%;
@@ -250,7 +282,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<button type="submit" onclick="scanQR()" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid; over">
                                     <img src="/goc/images/scanqr.png" height="50px" width="50px" style="margin: 0px 10px 0px -50px;">SCAN QR CODE </button>
 				<br>  
-                                <button type="submit" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid;">
+                                <button id="endEvent-Btn" type="submit" class="btn btn-secondary btn-lg btn-block button" style="border: 3px solid;">
 				END EVENT </button>
 				<br>  
 			</div>

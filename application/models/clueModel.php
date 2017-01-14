@@ -26,4 +26,6 @@ class clueModel extends CI_Model {
         }
         return false;
     }
+
+
 }

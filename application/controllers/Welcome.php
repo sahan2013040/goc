@@ -70,7 +70,13 @@ class Welcome extends CI_Controller {
             $postData["signUp"] = 'Signed up successfully';
             $this->load->view('signIn',$postData);
         }
-
-
     }
+
+    public function addPointsToUser(){
+        $username = $this->input->get('username');
+        $points = $this->input->get('points');
+        $this->UserModel->addPoints($username,$points);
+    }
+
+
 }

@@ -36,5 +36,6 @@ class Clue extends CI_Controller {
 	public function menu()
 	{
 		$this->load->view('iphone_menu');
-	}        
+	}
+
 }

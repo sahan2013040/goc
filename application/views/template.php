@@ -54,15 +54,18 @@
              * ////////////////////////////////////////////////////////////////////////////
              */
             $('#profile_Btn').click(function () {
+                var myvar = getURLParameter('username');
                 $(this).attr("src", "/goc/images/menu_buttons/darkprofile.png");
                 $('#help_Btn').attr("src", "/goc/images/menu_buttons/flathelp.png");
                 $('#createTH_Btn').attr("src", "/goc/images/menu_buttons/flatcreate.png");
                 $('#startTH_Btn').attr("src", "/goc/images/menu_buttons/flatstart.png");
-                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile');
+                console.log(myvar);
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile?user='+myvar);
             });
 
             $('#profileBtipadM').click(function () {
-                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile');
+                var myvar = getURLParameter('username');
+                loadPageToDiv('<?php echo base_url() ?>index.php/menuController/profile?user='+myvar);
             });
 
             ///////////////////////////////////////////////////////////////////////////////////
@@ -84,6 +87,9 @@
 
             ///////////////////////////////////////////////////////////////////////////////////
 
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+            }
 
             function loadPageToDiv(url) {
                 $('#content').load(url);

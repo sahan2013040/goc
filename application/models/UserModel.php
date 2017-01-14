@@ -37,4 +37,23 @@ class UserModel extends CI_Model {
             return false;
         }
     }
+
+    public function addPoints($username,$points){
+        $query = $this->db->query("SELECT * FROM users where name='".$username."'");
+
+        $row = $query->row_array();
+        $currentPoints = $row['points'];
+        $newPoints = $currentPoints + $points;
+        $data=array('points'=>$newPoints);
+        $this->db->where('name',$username);
+        $this->db->update('users',$data);
+    }
+
+    public function getPoints($username)
+    {
+        $query = $this->db->query("SELECT * FROM users where name='".$username."'");
+        $row = $query->row_array();
+        $currentPoints = $row['points'];
+        return $currentPoints;
+    }
 }

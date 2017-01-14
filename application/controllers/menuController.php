@@ -9,6 +9,7 @@ class MenuController extends CI_Controller
          include('PHPMailerAutoload.php');
         $this->load->helper('url');
         $this->load->model("eventModel");
+        $this->load->model("UserModel");
     }
 
     public function index()
@@ -37,6 +38,8 @@ class MenuController extends CI_Controller
         $this->load->model('User');
         $data["users"] = $this->User->get_user_info();
         $data["pubs"] =  $this->User->get_fav_pub_info();
+        $username = $this->input->get('user');
+        $data['points'] = $this->UserModel->getPoints($username);
 		$this->load->view('profile_view', $data);
     }
 

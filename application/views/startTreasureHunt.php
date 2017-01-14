@@ -2,13 +2,39 @@
     $(document).ready(function () {
         $('#start').click(function () {
 //            loadMyView('<?php //echo base_url(); ?>//index.php/huntController/solve');
+            console.log(window.location.href);
+            var myvar = getURLParameter('username');
+            console.log(myvar);
+            addPoints(myvar);
             $('#myModal').modal('toggle');
         });
+
+        function addPoints($username){
+            $.ajax({
+                url: "<?php echo base_url(); ?>index.php/Welcome/addPointsToUser",
+                type: "get", //send it through get method
+                data: {
+                    username: $username,
+                    points: 10
+
+                },
+                success: function (rsponse) {
+
+                },
+                error: function (xhr) {
+//                      console.log('ok');
+                }
+            });
+        }
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
 
         $('#dismiss-Btn').click(function () {
             $('body').removeClass('modal-open');
             $('.modal-backdrop').remove();
-            loadMyView('<?php echo base_url(); ?>index.php/huntController/solve');
+            loadMyView('<?php echo base_url(); ?>index.php/clue');
         });
     });
 </script>
@@ -110,6 +136,8 @@
                 <br><br>
                 <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">welcome   to   goc!</h2>
                 <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">you   are   right   on   time</h2>
+                <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">you   gained</h2>
+                <h2 id="poiHeading" class="title col-centered" style="text-align:center; ">10   points</h2>
 <!--                <p id="poiText" style="text-align: center; color:white;">welcome   to   goc!   you   are   right   on   time</p>-->
                 <!--<div class= "row">-->
                 <div class="col-centered" style="margin-bottom:2%; margin-left:10%; padding-left: 90px;">

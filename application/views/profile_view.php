@@ -183,7 +183,7 @@
 					<img src="/goc/images/crown.png" width="100%" height="80%" class="img-responsive">
 				</div>
 				<div class="col-xs-6">
-					<h1 class="title" style="color:yellow; font-size:44px;"> 100,000</h1>
+					<h1 class="title" style="color:yellow; font-size:44px;"> <?php echo $points;?></h1>
 				</div>
 				<div class="col-xs-3">
 					<img src="/goc/images/crown.png" width="100%" height="80%" class="img-responsive">
@@ -205,9 +205,9 @@
 					<h4 class="title"><?php echo $pub->name;?></h4>
 				</div>
 				<div class="col-xs-2">
-					<a href="#">
-					<img src="/goc/images/rightarrow.png" width="80%" height="50%" class="img-responsive">
-					</a>
+<!--					<a href="#">-->
+<!--					<img src="/goc/images/rightarrow.png" width="80%" height="50%" class="img-responsive">-->
+<!--					</a>-->
 				</div>
 			</div>
 			<?php } ?>
