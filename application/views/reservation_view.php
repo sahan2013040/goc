@@ -49,7 +49,12 @@
 
          });         
 
-
+            $('#bookingcnfrm').click(function () {
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();     
+                loadMyView('<?php echo base_url() ?>index.php/menuController/createTH');
+            
+            });
         });
       </script>   
    </head>
@@ -101,10 +106,13 @@
                   <div class="modal-body">
                     <h3 class="title col-centered" style="color: black;">BOOKING  CONFIRMATION</h3>
                     <br>
-                      <div id="pubInfo" style="color: black; font-size:14;">
-                         In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever                            since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world                             
+                      <div id="pubInfo" style="margin-left:20%;padding-top: 10%;color: black;width: 50% ;padding-left: 5%;">
+                         <p style="font-size: 32px;text-align: center;">Your booking has been confirmed! </p>                             
                          </div> 
-                      <button id="ok" type="submit"> OK </button>
+                      <div class="col-xs-6">
+                            <button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" 
+                                id="bookingcnfrm" data-dismiss="modal" style="border: 3px solid black; height:40px; margin-left:50%;">Cancel</button>
+                          </div>
                   </div>                
                 </div>
               </div>

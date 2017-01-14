@@ -252,8 +252,7 @@
 						<div class="modal-footer">
 							<div class= "row">
 								<div class="col-xs-6">
-									<button type="button" id="emailFavBtniPhone" class="btn btn-default btn-lg btn-block buttonEmailFav" data-
-										dismiss="modal">Email</button>
+									<button type="button" id="emailFavBtniPhone" class="btn btn-default btn-lg btn-block buttonEmailFav" data-dismiss="modal">Email</button>
 								</div>
 								<div class="col-xs-6">
 									<button type="button" class="btn btn-default btn-lg btn-block buttonEmailFav" data-dismiss="modal">Cancel</button>

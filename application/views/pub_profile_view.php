@@ -27,6 +27,9 @@
 
           $('#inviteBtniPad').click(function () {
              $('body').removeClass('modal-open');
+
+             $('.modal-backdrop').remove();            
+             loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventnameiPad').val()+'&venue='+'<?php echo $pub->id; ?>');
              $('.modal-backdrop').remove();
 
              loadMyView('<?php echo base_url().'/index.php/Invite?event=' ?>' + $('#eventnameiPad').val()+'&venue='+'<?php echo $pub->pub_id; ?>');
